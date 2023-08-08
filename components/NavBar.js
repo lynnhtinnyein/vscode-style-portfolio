@@ -1,18 +1,25 @@
 'use client';
 import { useCallback, useEffect, useState } from "react";
 import ChevronDownIcon from "../icons/vs_code_icons/ChevronDownIcon";
+import { pages } from "@/data/pages";
+import { useGlobalContext } from "@/context/GlobalContext";
+import ChevronRightIcon from "@/icons/vs_code_icons/ChevronRight";
 
-const NavBar = ({ show = true, onResize }) => {
+const NavBar = ({ show, onResize }) => {
+
+    const { activePage, openPages, dispatch } = useGlobalContext();
 
     const sideBarWidth = 50;
     const maxWidth = 280;
     const [width, setWidth ] = useState(180);
     const [resizeable, setResizeable] = useState(false);
 
-    const resize = useCallback( (event) => {
+    const [showOpenPages, setShowOpenPages] = useState(true);
+    const [showAllPages, setShowAllPages] = useState(true);
 
+    const resize = useCallback( (event) => {
         event.preventDefault();
-        const newWidth = event.clientX - sideBarWidth - 2;
+        const newWidth = event.clientX - sideBarWidth;
 
         setWidth(newWidth);
         if(newWidth > maxWidth || newWidth < 0) {
@@ -26,17 +33,32 @@ const NavBar = ({ show = true, onResize }) => {
         onResize(show ? 180 : 0);
     }, [show]);
 
-    useEffect( () => {
+    const diableResize = () => {
+        setResizeable(false);
+    }
 
+    useEffect( () => {
+        window.addEventListener('mouseup', diableResize);
+        return () => window.removeEventListener('mouseup', diableResize);
+    }, []);
+
+    useEffect( () => {
         if(resizeable){
             window.addEventListener('mousemove', resize);
         } else {
             window.removeEventListener('mousemove', resize);
         }
-
         return () => window.removeEventListener('mousemove', resize);
-
     }, [resizeable]);
+
+    //methods
+    const openPage = (id) => {
+        dispatch({ type: 'SET_ACTIVE_PAGE', payload: id });
+        
+        if(!openPages.includes(id)){
+            dispatch({ type: 'SET_OPEN_PAGES', payload: [...openPages, id] });
+        }
+    };
     
     return (
         <>
@@ -51,22 +73,59 @@ const NavBar = ({ show = true, onResize }) => {
                     <span className="text-gray-300 text-xs py-2">•••</span>
                 </div>
 
-                <div className="flex flex-row items-center bg-zinc-800 py-1 space-x-1 px-1">
-                    <ChevronDownIcon/>
+                {/* open editors */}
+                <div 
+                    className="flex flex-row items-center bg-zinc-800 py-1 space-x-1 px-1"
+                    onClick={ () => setShowOpenPages(!showOpenPages) }
+                >
+                    { showOpenPages ? <ChevronDownIcon size="16"/> : <ChevronRightIcon size="16"/> }
                     <span className="text-gray-300 font-bold text-xs">OPEN EDITORS</span>
                 </div>
 
-                <div className="flex flex-row items-center bg-zinc-800 py-1 space-x-1 px-1">
-                    <ChevronDownIcon/>
+                <div className={`accordion ${ showOpenPages && 'show-accordion'}`}>
+                    { openPages.map( id => 
+                        <div
+                            key={id} 
+                            className={`flex flex-row space-x-2 py-1 px-5 cursor-pointer ${ activePage === id && 'bg-zinc-700'}`}
+                            onClick={ () => openPage(id) }
+                        >
+                            { pages.find( e => e.id === id).fileIcon }
+                            <span className="text-xs text-yellow-200">{ pages.find( e => e.id === id).name }</span>
+                        </div>
+                    )}
+                </div>
+
+                {/* all pages  */}
+                <div 
+                    className="flex flex-row items-center bg-zinc-800 py-1 space-x-1 px-1"
+                    onClick={ () => setShowAllPages(!showAllPages) }
+                >
+                    { showAllPages ? <ChevronDownIcon size="16"/> : <ChevronRightIcon size="16"/> }
                     <span className="text-gray-300 font-bold text-xs">PORTFOLIO</span>
                 </div>
 
+                <div className={`accordion ${ showAllPages && 'show-accordion'}`}>
+                    { pages.map( page => 
+                        <div
+                            key={page.id} 
+                            className={`flex flex-row space-x-2 py-1 px-5 cursor-pointer ${ activePage === page.id && 'bg-zinc-700'}`}
+                            onClick={ () => openPage(page.id) }
+                        >
+                            {page.fileIcon}
+                            <span className="text-xs text-yellow-200">{page.name}</span>
+                        </div>
+                    )}
+                </div>
+
             </div>
+
             {/* resizer */}
             <div 
-                className={`w-1 cursor-col-resize hover:bg-gray-500 ${show ? '' : 'hidden'}`}
+                className={`cursor-col-resize hover:bg-gray-500 ${show ? '' : 'hidden'}`}
+                style={{
+                    padding: 2
+                }}
                 onMouseDown={ () => setResizeable(true) }
-                onMouseUp={ () => setResizeable(false) }
             />
         </>
     )

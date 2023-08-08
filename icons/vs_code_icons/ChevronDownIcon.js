@@ -1,8 +1,8 @@
 const ChevronDownIcon = ({ size = 24 }) => {
     return (
         <svg
-            width={16}
-            height={16}
+            width={size}
+            height={size}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

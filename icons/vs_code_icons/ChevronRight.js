@@ -1,19 +1,22 @@
-const ChevronRight = ({ size = 24 }) => {
+const ChevronRightIcon = ({ size = 24 }) => {
     return (
         <svg
             width={size}
             height={size}
-            viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="text-gray-300"
         >
             <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M10.072 8.024L5.715 3.667l.618-.62L11 7.716v.618L6.333 13l-.618-.619 4.357-4.357z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
             />
         </svg>
     );
 };
 
-export default ChevronRight;
+export default ChevronRightIcon;

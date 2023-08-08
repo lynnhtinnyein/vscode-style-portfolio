@@ -10,7 +10,7 @@ const header = () => {
 
             <div>
                 <span className="text-gray-300 text-xs">
-                    Lin Hitn Nyein - Portfolio
+                    @lynnhtinnyein
                 </span>
             </div>
             

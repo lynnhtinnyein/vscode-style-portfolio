@@ -1,34 +1,47 @@
 'use client'
-import { useCallback, useState } from "react";
+import { useEffect, useState } from "react";
 import FilesIcon from "../icons/vs_code_icons/FilesIcon";
 import { pages } from "@/data/pages";
 import SettingsIcon from "@/icons/vs_code_icons/SettingsIcon";
 import SourceControlIcon from "@/icons/vs_code_icons/SourceControlIcon";
+import useDeviceDetect from "@/hooks/useDeviceDetect";
+import { useGlobalContext } from "@/context/GlobalContext";
 
-const SideBar = ({ onPageChange, onToggleNavBar }) => {
+const SideBar = ({ onToggleNavBar }) => {
+
+    const { isMobile } = useDeviceDetect();
+    const { activePage, openPages, dispatch } = useGlobalContext();
 
     const topPages = pages.filter( e => e.showInSideBar && e.position === 'top');
     const bottomPages = pages.filter( e => e.showInSideBar && e.position === 'bottom');
 
-    const [activePageId, setActivePageId] = useState(null);
     const [showNavBar, setShowNavBar] = useState(true);
     const [showSetting, setShowSetting] = useState(false);
 
+    useEffect( () => {
+        setShowNavBar(!isMobile);
+        onToggleNavBar(!isMobile);
+    }, [isMobile]);
+
+    //methods
     const changeShowNavBar = () => {
         setShowNavBar(!showNavBar)
         onToggleNavBar(!showNavBar);
     };
 
-    const changePage = useCallback( (pageName) => {
-        setActivePageId(pageName)
-        onPageChange(pageName);
-    }, []);
+    const openPage = (id) => {
+        dispatch({ type: 'SET_ACTIVE_PAGE', payload: id });
+        
+        if(!openPages.includes(id)){
+            dispatch({ type: 'SET_OPEN_PAGES', payload: [...openPages, id] });
+        }
+    };
         
     return (
         <div 
             className="flex flex-col justify-between bg-zinc-800"
             style={{
-                width: 50
+                maxWidth: 48
             }}
         >
 
@@ -51,18 +64,18 @@ const SideBar = ({ onPageChange, onToggleNavBar }) => {
                     <div 
                         key={page.id}
                         className={`p-3 cursor-pointer hover:text-white ${
-                            page.id === activePageId
+                            page.id === activePage
                             ? 'border-l border-l-white text-white'
                             : 'text-zinc-500'
                         }`}
-                        onClick={ () => changePage(page.id) }
+                        onClick={ () => openPage(page.id) }
                     >
                         { page.sideBarIcon }
                     </div>
                 )}
 
                 {/* nav_bar_toggle */}
-                <a href="https://github.com/lynnhtinnyein" target="_blank">
+                <a href="https://github.com/lynnhtinnyein/vscode_style_portfolio" target="_blank">
                     <div className="p-3 cursor-pointer hover:text-white text-zinc-500">
                         <SourceControlIcon/>
                     </div>
@@ -76,11 +89,11 @@ const SideBar = ({ onPageChange, onToggleNavBar }) => {
                     <div 
                         key={page.id} 
                         className={`p-3 hover:text-white ${
-                            page.id === activePageId 
+                            page.id === activePage
                             ? 'border-l border-l-white text-white'
                             : 'text-zinc-500'
                         }`}
-                        onClick={ () => changePage(page.id) }
+                        onClick={ () => openPage(page.id) }
                     >
                         { page.sideBarIcon }
                     </div>
