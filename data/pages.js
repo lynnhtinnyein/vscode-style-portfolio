@@ -5,48 +5,65 @@ import GithubIcon from "../icons/vs_code_icons/GithubIcon";
 import MailIcon from "../icons/vs_code_icons/MailIcon";
 import JsIcon from "@/icons/language_icons/JsIcon";
 import CssIcon from "@/icons/language_icons/CssIcon";
-import HtmlIcon from "@/icons/language_icons/HtmlIcon";
 import GitIcon from "@/icons/language_icons/GitIcon";
+import Welcome from "@/components/pages/Welcome";
+import Languages from "@/components/pages/Languages";
+import Projects from "@/components/pages/Projects";
+import Github from "@/components/pages/Github";
+import Contact from "@/components/pages/Contact";
+import About from "@/components/pages/About";
+import HomeIcon from "@/icons/vs_code_icons/HomeIcon";
+import MarkDownIcon from "@/icons/language_icons/MarkDownIcon";
+import JsonIcon from "@/icons/language_icons/JsonIcon";
+import JsObjectIcon from "@/icons/vs_code_icons/JsonIcon";
 
 export const pages = [
     {
         id: 1,
         name: 'welcome.jsx',
         fileIcon: <ReactIcon size="16" />,
-        sideBarIcon: <CodeIcon/>,
+        sideBarIcon: <HomeIcon/>,
         position: 'top',
-        showInSideBar: false,
+        component: <Welcome/>
     },
     {
         id: 2,
+        name: 'languages.json',
+        fileIcon: <JsonIcon size="16" />,
+        sideBarIcon: <JsObjectIcon/>,
+        position: 'top',
+        component: <Languages/>
+    },
+    {
+        id: 3,
         name: 'projects.js',
         fileIcon: <JsIcon size="16" />,
         sideBarIcon: <CodeIcon/>,
         position: 'top',
-        showInSideBar: true
+        component: <Projects/>
     },
     {
-        id: 3,
+        id: 4,
         name: 'github.git',
         fileIcon: <GitIcon size="16" />,
         sideBarIcon: <GithubIcon/>,
         position: 'top',
-        showInSideBar: true
+        component: <Github/>
     },
     {
-        id: 4,
+        id: 5,
         name: 'contact.css',
         fileIcon: <CssIcon size="16" />,
         sideBarIcon: <MailIcon/>,
         position: 'top',
-        showInSideBar: true
+        component: <Contact/>
     },
     {
-        id: 5,
+        id: 6,
         name: 'about.html',
-        fileIcon: <HtmlIcon size="16" />,
+        fileIcon: <MarkDownIcon size="16" />,
         sideBarIcon: <AccountIcon/>,
         position: 'bottom',
-        showInSideBar: true
+        component: <About/>
     }
 ];

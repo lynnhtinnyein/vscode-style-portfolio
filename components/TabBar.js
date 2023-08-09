@@ -18,7 +18,7 @@ const TabBar = () => {
     }
 
     return (
-        <div className="flex flex-row bg-zinc-900 items-center overflow-x-auto">
+        <div className="tabbar flex flex-row bg-zinc-900 items-center overflow-x-auto">
             {openPages.map( (id) => (
                 <div
                     key={id}

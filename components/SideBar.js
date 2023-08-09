@@ -12,8 +12,8 @@ const SideBar = ({ onToggleNavBar }) => {
     const { isMobile } = useDeviceDetect();
     const { activePage, openPages, dispatch } = useGlobalContext();
 
-    const topPages = pages.filter( e => e.showInSideBar && e.position === 'top');
-    const bottomPages = pages.filter( e => e.showInSideBar && e.position === 'bottom');
+    const topPages = pages.filter( e => e.position === 'top');
+    const bottomPages = pages.filter( e => e.position === 'bottom');
 
     const [showNavBar, setShowNavBar] = useState(true);
     const [showSetting, setShowSetting] = useState(false);
@@ -38,12 +38,7 @@ const SideBar = ({ onToggleNavBar }) => {
     };
         
     return (
-        <div 
-            className="flex flex-col justify-between bg-zinc-800"
-            style={{
-                maxWidth: 48
-            }}
-        >
+        <div className="sidebar flex flex-col justify-between bg-zinc-800">
 
             {/* top_buttons */}
             <div className="flex flex-col items-center justify-center">

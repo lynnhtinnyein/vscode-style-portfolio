@@ -5,17 +5,23 @@ import NavBar from "./NavBar";
 import SideBar from "./SideBar";
 import TabBar from "./TabBar";
 import useDeviceDetect from "@/hooks/useDeviceDetect";
+import { pages } from "@/data/pages";
+import { useGlobalContext } from "@/context/GlobalContext";
+import Footer from "./Footer";
 
 const Initial = () => {
 
+    const { activePage } = useGlobalContext();
+
     const sideBarWidth = 48;
+
     const { deviceWidth } = useDeviceDetect();
     const [navBarWidth, setNavBarWidth] = useState(180);
 
     const [showNavBar, setShowNavBar] = useState(true);
 
     //computed
-    const outletWidth = useMemo( () => {
+    const outletMaxWidth = useMemo( () => {
         return deviceWidth - (sideBarWidth + navBarWidth);
     }, [deviceWidth, navBarWidth]);
     
@@ -35,21 +41,21 @@ const Initial = () => {
                     onResize={setNavBarWidth} 
                 />
 
-                <div className="flex flex-1 flex-col bg-cyan-300" style={{
-                    maxWidth: outletWidth
-                }}>
-                    
+                <div 
+                    className="flex flex-1 flex-col bg-zinc-800" 
+                    style={{
+                        maxWidth: outletMaxWidth,
+                    }}
+                >
+                
                     <TabBar/>
+                    { pages.find( e => e.id === activePage ).component }
 
-                    <div className="flex-1 bg-yellow-300 break-words">
-                        jfdffdfkjdfkldkfjdfjfdffdfkjdfkldkfjdfjfdfdfdjfdffdfkjdfkldkfjdfjfdffdfkjdfkldkfjdfjfdfdfdjfdffdfkjdfkldkfjdfjfdffdfkjdfkldkfjdfjfdfdfd
-                    </div>
                 </div>
             </div>
 
-            <div className="bg-red-300">
-                fdf
-            </div>
+            <Footer/>
+
         </div>
     );
 }

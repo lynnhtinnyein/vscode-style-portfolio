@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.header {
+    height: 35px;
+}
+
+.sidebar {
+    width: 48px;
+}
+
+.tabbar {
+    height: 32px;
+}
+
+.footer {
+    height: 25px;
+}
+
 .accordion {
     overflow: hidden;
     max-height: 0;

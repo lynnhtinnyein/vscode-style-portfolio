@@ -11,7 +11,7 @@ const NavBar = ({ show, onResize }) => {
 
     const sideBarWidth = 50;
     const maxWidth = 280;
-    const [width, setWidth ] = useState(180);
+    const [width, setWidth ] = useState(150);
     const [resizeable, setResizeable] = useState(false);
 
     const [showOpenPages, setShowOpenPages] = useState(true);
@@ -29,8 +29,8 @@ const NavBar = ({ show, onResize }) => {
     }, []);
 
     useEffect( () => {
-        setWidth(show ? 180 : 0);
-        onResize(show ? 180 : 0);
+        setWidth(show ? 150 : 0);
+        onResize(show ? 150 : 0);
     }, [show]);
 
     const diableResize = () => {
@@ -123,7 +123,7 @@ const NavBar = ({ show, onResize }) => {
             <div 
                 className={`cursor-col-resize hover:bg-gray-500 ${show ? '' : 'hidden'}`}
                 style={{
-                    padding: 2
+                    padding: 1.5
                 }}
                 onMouseDown={ () => setResizeable(true) }
             />
