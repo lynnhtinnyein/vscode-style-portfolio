@@ -9,8 +9,9 @@ const NavBar = ({ show, onResize }) => {
 
     const { activePage, openPages, dispatch } = useGlobalContext();
 
-    const sideBarWidth = 50;
+    const sideBarWidth = 48;
     const maxWidth = 280;
+    const resizerWidth = 2;
     const [width, setWidth ] = useState(150);
     const [resizeable, setResizeable] = useState(false);
 
@@ -25,7 +26,7 @@ const NavBar = ({ show, onResize }) => {
         if(newWidth > maxWidth || newWidth < 0) {
             setResizeable(false);
         }
-        onResize(newWidth);
+        onResize(newWidth + resizerWidth);
     }, []);
 
     useEffect( () => {
@@ -121,10 +122,7 @@ const NavBar = ({ show, onResize }) => {
 
             {/* resizer */}
             <div 
-                className={`cursor-col-resize hover:bg-gray-500 ${show ? '' : 'hidden'}`}
-                style={{
-                    padding: 1.5
-                }}
+                className={`resizer cursor-col-resize hover:bg-gray-500 ${show ? '' : 'hidden'}`}
                 onMouseDown={ () => setResizeable(true) }
             />
         </>

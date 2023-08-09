@@ -1,3 +1,5 @@
+import NextjsIcon from "@/icons/vs_code_icons/NextjsIcon";
+
 const header = () => {
     return (
         <div className="header flex flex-row items-center bg-zinc-900 px-2">
@@ -14,8 +16,10 @@ const header = () => {
                 </span>
             </div>
             
-            <div className="flex-1">
-                {/* empty */}
+            <div className="flex flex-row flex-1 mr-1 justify-end">
+                <span className="text-white">
+                    <NextjsIcon size="16"/>
+                </span>
             </div>
 
         </div>

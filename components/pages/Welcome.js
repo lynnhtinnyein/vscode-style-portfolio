@@ -1,4 +1,5 @@
 import { useGlobalContext } from "@/context/GlobalContext";
+import { pages } from "@/data/pages";
 import useDeviceDetect from "@/hooks/useDeviceDetect";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
@@ -27,7 +28,7 @@ const Welcome = () => {
         <div
             className="flex flex-1 flex-wrap flex-row justify-around items-center bg-zinc-800 overflow-y-auto"
             style={{
-                maxHeight: maxHeight,
+                maxHeight,
             }}
         >
             <div className="flex flex-col m-5">
@@ -72,8 +73,7 @@ const Welcome = () => {
                         className="border border-orange-400 px-3 py-2 hover:bg-orange-400"
                         onClick={() =>
                             openPage(
-                                pages.find((e) => e.name === "languages.json")
-                                    .id
+                                pages.find((e) => e.name === "languages.json").id
                             )
                         }
                     >
@@ -97,6 +97,7 @@ const Welcome = () => {
                     src="/me.png"
                     width={350}
                     height={350}
+                    priority={true}
                     alt="Picture of the author"
                 />
             </div>

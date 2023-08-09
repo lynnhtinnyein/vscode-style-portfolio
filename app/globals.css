@@ -6,6 +6,10 @@
     height: 35px;
 }
 
+.resizer {
+    width: 2px;
+}
+
 .sidebar {
     width: 48px;
 }
