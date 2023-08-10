@@ -7,7 +7,7 @@ import ChevronRightIcon from "@/icons/vs_code_icons/ChevronRight";
 
 const NavBar = ({ show, onResize }) => {
 
-    const { activePage, openPages, dispatch } = useGlobalContext();
+    const { activePage, openedPages, openPage } = useGlobalContext();
 
     const sideBarWidth = 48;
     const maxWidth = 280;
@@ -15,7 +15,7 @@ const NavBar = ({ show, onResize }) => {
     const [width, setWidth ] = useState(150);
     const [resizeable, setResizeable] = useState(false);
 
-    const [showOpenPages, setShowOpenPages] = useState(true);
+    const [showopenedPages, setShowopenedPages] = useState(true);
     const [showAllPages, setShowAllPages] = useState(true);
 
     const resize = useCallback( (event) => {
@@ -53,13 +53,7 @@ const NavBar = ({ show, onResize }) => {
     }, [resizeable]);
 
     //methods
-    const openPage = (id) => {
-        dispatch({ type: 'SET_ACTIVE_PAGE', payload: id });
-        
-        if(!openPages.includes(id)){
-            dispatch({ type: 'SET_OPEN_PAGES', payload: [...openPages, id] });
-        }
-    };
+    
     
     return (
         <>
@@ -77,14 +71,14 @@ const NavBar = ({ show, onResize }) => {
                 {/* open editors */}
                 <div 
                     className="flex flex-row items-center bg-zinc-800 py-1 space-x-1 px-1"
-                    onClick={ () => setShowOpenPages(!showOpenPages) }
+                    onClick={ () => setShowopenedPages(!showopenedPages) }
                 >
-                    { showOpenPages ? <ChevronDownIcon size="16"/> : <ChevronRightIcon size="16"/> }
+                    { showopenedPages ? <ChevronDownIcon size="16"/> : <ChevronRightIcon size="16"/> }
                     <span className="text-gray-300 font-bold text-xs">OPEN EDITORS</span>
                 </div>
 
-                <div className={`accordion ${ showOpenPages && 'show-accordion'}`}>
-                    { openPages.map( id => 
+                <div className={`accordion ${ showopenedPages && 'show-accordion'}`}>
+                    { openedPages.map( id => 
                         <div
                             key={id} 
                             className={`flex flex-row space-x-2 py-1 px-5 cursor-pointer ${ activePage === id && 'bg-zinc-700'}`}

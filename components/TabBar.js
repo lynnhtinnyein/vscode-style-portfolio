@@ -4,22 +4,27 @@ import XIcon from "@/icons/vs_code_icons/XIcon";
 
 const TabBar = () => {
 
-    const { activePage, openPages, dispatch } = useGlobalContext();
+    const { activePage, openedPages, dispatch } = useGlobalContext();
 
     //methods
     const closePage = (id) => {
 
         if(activePage === id){
-            const lastOpenPage = openPages[openPages.length - 1];
-            dispatch({ type: 'SET_ACTIVE_PAGE', payload: lastOpenPage })
+
+            if(openedPages.length === 1){
+                dispatch({ type: 'SET_ACTIVE_PAGE', payload: null })
+            } else {
+                const lastOpenPage = openedPages[openedPages.length - 1];
+                dispatch({ type: 'SET_ACTIVE_PAGE', payload: lastOpenPage })
+            }
         }            
         
-        dispatch({ type: 'SET_OPEN_PAGES', payload: openPages.filter( e => e !== id ) }); 
+        dispatch({ type: 'SET_OPEN_PAGES', payload: openedPages.filter( e => e !== id ) }); 
     }
 
     return (
         <div className="tabbar flex flex-row bg-zinc-900 items-center overflow-x-auto">
-            {openPages.map( (id) => (
+            {openedPages.map( (id) => (
                 <div
                     key={id}
                     className={`flex flex-row cursor-pointer pr-3 items-center space-x-2 border-r border-r-zinc-900 ${
@@ -45,6 +50,7 @@ const TabBar = () => {
                     >
                         <XIcon size="14" />
                     </div>
+
                 </div>
             ))}
         </div>

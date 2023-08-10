@@ -1,34 +1,19 @@
 import { useGlobalContext } from "@/context/GlobalContext";
 import { pages } from "@/data/pages";
-import useDeviceDetect from "@/hooks/useDeviceDetect";
+import useMaxPageHeight from "@/hooks/useMaxPageHeight";
 import Image from "next/image";
 import { Typewriter } from "react-simple-typewriter";
 
 const Welcome = () => {
 
-    const { openPages, dispatch } = useGlobalContext();
-
-    const { deviceHeight } = useDeviceDetect();
-    const headerHeight = 35;
-    const tabBarHeight = 32;
-    const footerHeight = 25;
-
-    const maxHeight = deviceHeight - (headerHeight + tabBarHeight + footerHeight);
-
-    //methods
-    const openPage = (id) => {
-        dispatch({ type: 'SET_ACTIVE_PAGE', payload: id });
-        
-        if(!openPages.includes(id)){
-            dispatch({ type: 'SET_OPEN_PAGES', payload: [...openPages, id] });
-        }
-    };
+    const { openPage } = useGlobalContext();
+    const maxPageHeight = useMaxPageHeight();
 
     return (
         <div
             className="flex flex-1 flex-wrap flex-row justify-around items-center bg-zinc-800 overflow-y-auto"
             style={{
-                maxHeight,
+                maxHeight: maxPageHeight,
             }}
         >
             <div className="flex flex-col m-5">

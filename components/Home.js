@@ -8,6 +8,7 @@ import useDeviceDetect from "@/hooks/useDeviceDetect";
 import { pages } from "@/data/pages";
 import { useGlobalContext } from "@/context/GlobalContext";
 import Footer from "./Footer";
+import NoOpenPage from "./pages/NoOpenPage";
 
 const Initial = () => {
 
@@ -49,7 +50,11 @@ const Initial = () => {
                 >
                 
                     <TabBar/>
-                    { pages.find( e => e.id === activePage ).component }
+                    { 
+                        pages.find( e => e.id === activePage )
+                        ? pages.find( e => e.id === activePage ).component 
+                        : <NoOpenPage/>
+                    }
 
                 </div>
             </div>

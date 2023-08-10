@@ -4,7 +4,7 @@ const GlobalContext = createContext();
 
 const initialState = {
     activePage: 1,
-    openPages: [1],
+    openedPages: [1],
 };
 
 const reducer = (state, action) => {
@@ -13,7 +13,7 @@ const reducer = (state, action) => {
             return { ...state, activePage: action.payload };
 
         case "SET_OPEN_PAGES":
-            return { ...state, openPages: action.payload };
+            return { ...state, openedPages: action.payload };
 
         default:
             return state;
@@ -23,8 +23,17 @@ const reducer = (state, action) => {
 const GlobalContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
+    //methods
+    const openPage = (id) => {
+        dispatch({ type: 'SET_ACTIVE_PAGE', payload: id });
+        
+        if(!state.openedPages.includes(id)){
+            dispatch({ type: 'SET_OPEN_PAGES', payload: [...state.openedPages, id] });
+        }
+    };
+
     return (
-        <GlobalContext.Provider value={{ ...state, dispatch }}>
+        <GlobalContext.Provider value={{ ...state, dispatch, openPage }}>
             {children}
         </GlobalContext.Provider>
     );

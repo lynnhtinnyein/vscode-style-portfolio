@@ -60,7 +60,7 @@ export const pages = [
     },
     {
         id: 6,
-        name: 'about.html',
+        name: 'about.md',
         fileIcon: <MarkDownIcon size="16" />,
         sideBarIcon: <AccountIcon/>,
         position: 'bottom',

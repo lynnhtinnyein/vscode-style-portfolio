@@ -10,7 +10,7 @@ import { useGlobalContext } from "@/context/GlobalContext";
 const SideBar = ({ onToggleNavBar }) => {
 
     const { isMobile } = useDeviceDetect();
-    const { activePage, openPages, dispatch } = useGlobalContext();
+    const { activePage, openPage } = useGlobalContext();
 
     const topPages = pages.filter( e => e.position === 'top');
     const bottomPages = pages.filter( e => e.position === 'bottom');
@@ -27,14 +27,6 @@ const SideBar = ({ onToggleNavBar }) => {
     const changeShowNavBar = () => {
         setShowNavBar(!showNavBar)
         onToggleNavBar(!showNavBar);
-    };
-
-    const openPage = (id) => {
-        dispatch({ type: 'SET_ACTIVE_PAGE', payload: id });
-        
-        if(!openPages.includes(id)){
-            dispatch({ type: 'SET_OPEN_PAGES', payload: [...openPages, id] });
-        }
     };
         
     return (
