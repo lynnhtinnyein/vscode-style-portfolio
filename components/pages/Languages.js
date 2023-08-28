@@ -16,7 +16,7 @@ const Languages = () => {
             <span className="text-2xl text-gray-300 font-mono">
                 <Typewriter
                     words={[
-                        'Languages I specialize in'
+                        'Feel Confident in working with'
                     ]}
                     typeSpeed={30}
                 />

@@ -44,9 +44,9 @@ const Welcome = () => {
                                 "ReactNative",
                                 "Vue",
                                 "Laravel",
-                                "MySQL",
-                                "Bootstrap",
                                 "Tailwind",
+                                "Bootstrap",
+                                "MySQL"
                             ]}
                             loop={false}
                             cursor={true}
@@ -79,7 +79,7 @@ const Welcome = () => {
 
             <div>
                 <Image
-                    src="/me.png"
+                    src="/images/me.png"
                     width={350}
                     height={350}
                     priority={true}

@@ -2,3 +2,7 @@
 const nextConfig = {}
 
 module.exports = nextConfig
+
+// images: {
+//     domains: ["amazonaws.com"],
+//   },

@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 
 const useDeviceDetect = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const [dimension, setDimension] = useState(1000);
+    const [dimension, setDimension] = useState({
+        width: 0,
+        height: 0
+    });
 
     const handleResize = () => {
 
@@ -15,9 +18,7 @@ const useDeviceDetect = () => {
 
     useEffect(() => {
         handleResize();
-
         window.addEventListener('resize', handleResize);
-
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 

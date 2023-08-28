@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <div>
-            about
+            I'm a web codigo based in Myanmar!
         </div>
     );
 }
