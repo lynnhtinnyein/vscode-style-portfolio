@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex flex-row items-center">
             
                 <a 
-                    href="https://github.com/lynnhtinnyein/vscode_style_portfolio" 
+                    href="https://github.com/lynnhtinnyein/vscode-style-portfolio" 
                     className="flex flex-row items-center"
                     target="_blank"
                 >

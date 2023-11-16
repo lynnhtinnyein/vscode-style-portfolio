@@ -62,7 +62,7 @@ const SideBar = ({ onToggleNavBar }) => {
                 )}
 
                 {/* nav_bar_toggle */}
-                <a href="https://github.com/lynnhtinnyein/vscode_style_portfolio" target="_blank">
+                <a href="https://github.com/lynnhtinnyein/vscode-style-portfolio" target="_blank">
                     <div className="p-3 cursor-pointer hover:text-white text-zinc-500">
                         <SourceControlIcon/>
                     </div>
