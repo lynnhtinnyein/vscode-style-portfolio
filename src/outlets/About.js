@@ -5,7 +5,7 @@ import React from "react";
 const About = () => {
     const { openPage } = usePages();
 
-    const startDate = new Date("2021-01-01");
+    const startDate = new Date("2020-01-01");
     const endDate = new Date();
 
     const durationInMs = endDate - startDate;
@@ -16,7 +16,7 @@ const About = () => {
     );
 
     return (
-        <div className="animate-fadeup flex flex-col space-y-12 flex-1 p-10 overflow-auto font-mono">
+        <div className="animate-fadeup flex flex-col space-y-11 flex-1 p-10 overflow-auto font-mono">
             <div className="flex flex-col space-y-6">
                 <div>
                     <span className="text-2xl text-orange-300 border-b-4 border-b-zinc-500">
@@ -73,7 +73,7 @@ const About = () => {
                     </div>
                     <div className="flex flex-row items-center space-x-3">
                         <span className="max-w-10 min-w-10 text-center font-bold text-blue-200">
-                            2017
+                            2018
                         </span>
                         <span className="text-sm">
                             Completed Level 5 Diploma in Computing of NCC
@@ -82,7 +82,7 @@ const About = () => {
                     </div>
                     <div className="flex flex-row items-center space-x-3">
                         <span className="max-w-10 min-w-10 text-center font-bold text-blue-200">
-                            2018
+                            2019
                         </span>
                         <span className="text-sm">
                             Completed the Bachelor Degree of Business IT program
@@ -91,29 +91,18 @@ const About = () => {
                     </div>
                     <div className="flex flex-row items-center space-x-3">
                         <span className="max-w-10 min-w-10 text-center font-bold text-blue-200">
-                            2019 | 2022
+                            2019 | 2020
                         </span>
                         <span className="text-sm">
-                            Worked as a freelance fullstack developer.
-                        </span>
-                    </div>
-                    <div className="flex flex-row items-center space-x-3">
-                        <span className="max-w-10 min-w-10 text-center overflow-hidden font-bold text-blue-200">
-                            2022 | 2023
-                        </span>
-                        <span className="text-sm">
-                            Worked as an IT technician at{" "}
-                            <i className="font-bold">Mya Thar Htin</i> Gold &
-                            Jewelry Business Yangon.
+                            Worked as a Junior System Analyst at MCC (Myanmar Computer Company)
                         </span>
                     </div>
                     <div className="flex flex-row items-center space-x-3">
                         <span className="max-w-10 min-w-10 text-center font-bold text-blue-200">
-                            2023 | Present
+                            2020 | Present
                         </span>
                         <span className="text-sm">
-                            Working as a freelance developer and creating own
-                            products.
+                            Working as a freelance developer and creating own products.                       
                         </span>
                     </div>
                 </div>

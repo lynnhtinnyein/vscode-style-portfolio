@@ -116,7 +116,7 @@ const Contact = () => {
                     <span className="text-2xl text-gray-300 font-mono">
                         <Typewriter
                             words={[
-                                'Send me an email to'
+                                'Send an email to'
                             ]}
                             typeSpeed={30}
                         />
