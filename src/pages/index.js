@@ -9,7 +9,7 @@ import TabBar from "@/components/TabBar/TabBar";
 import { pages } from "@/data/pages";
 import NoOpenPage from "@/outlets/NoOpenPage";
 
-const Home = () => {
+const BaseFrame = () => {
     const { activePage } = usePages();
     const { isMobile } = useDeviceDetection();
     const [showExplorer, setShowExplorer] = useState(true);
@@ -55,8 +55,12 @@ const Home = () => {
     );
 };
 
-export default () => (
-    <PagesProvider>
-        <Home />
-    </PagesProvider>
-);
+const Home = () => {
+    return (
+        <PagesProvider>
+            <BaseFrame />
+        </PagesProvider>
+    )
+}
+
+export default Home;
