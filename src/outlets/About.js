@@ -25,20 +25,20 @@ const About = () => {
                 </div>
 
                 <p>
-                    &emsp; I'm Lin Htin Nyein, an indie app developer originally
+                    &emsp; I&apos;m Lin Htin Nyein, an indie app developer originally
                     from Myanmar, currently residing in Thailand, who is always
-                    thinking about to solve people's real-life problems with
+                    thinking about to solve people&apos;s real-life problems with
                     apps. Usually, I spend my day in front of my dev-desk doing
-                    app-design and development. I've independently created
+                    app-design and development. I&apos;ve independently created
                     several web-based and mobile applications using web
                     technologies. I especially love to work on the frontend by
                     creating user interfaces with clean, efficient and reuseable
                     code.
                 </p>
                 <p>
-                    &emsp; I've been thriving as a freelance developer in my
+                    &emsp; I&apos;ve been thriving as a freelance developer in my
                     local (Myanmar) for almost {yearDuration} years. During this
-                    period, I have been busy with creating clients' business
+                    period, I have been busy with creating clients&apos; business
                     apps according to their needs and distributing my own
                     products.
                 </p>

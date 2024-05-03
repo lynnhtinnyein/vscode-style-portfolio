@@ -4,8 +4,8 @@ import reducer from "./reducer";
 const PagesContext = createContext();
 
 const initialState = {
-    activePage: 5,
-    openedPages: [5],
+    activePage: 1,
+    openedPages: [1],
 };
 
 const PagesProvider = ({ children }) => {

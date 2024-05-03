@@ -18,7 +18,7 @@ const Welcome = () => {
                 </div>
                 <div className="mt-8">
                     <span className="text-4xl font-mono text-gray-300">
-                        I'm Lin Htin Nyein
+                        I&apos;m Lin Htin Nyein
                     </span>
                 </div>
                 <div className="mt-3">
