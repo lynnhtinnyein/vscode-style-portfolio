@@ -65,7 +65,7 @@ const Contact = () => {
     }
 
     return (
-        <div className="flex flex-col flex-1 space-y-7 overflow-auto p-10">
+        <div className="flex flex-col flex-1 space-y-7 overflow-auto p-5 md:p-10">
 
             <div className="flex flex-col space-y-5">
                 <span className="text-2xl text-gray-300 font-mono">
@@ -133,9 +133,9 @@ const Contact = () => {
                 </div>
 
                 <form className="flex flex-col space-y-4" onSubmit={submit}>
-                    <div className="flex flex-row justify-between space-x-4">
+                    <div className="flex flex-row justify-between flex-wrap sm:space-x-4">
                         <div className="flex flex-col space-y-1 flex-1">
-                            <span>
+                            <span className="font-mono">
                                 Your Email
                             </span>
                             <input 
@@ -151,7 +151,7 @@ const Contact = () => {
                             ) : ''}
                         </div>
                         <div className="flex flex-col space-y-1 flex-1">
-                            <span>
+                            <span className="font-mono">
                                 Your Name
                             </span>
                             <input 
@@ -169,7 +169,7 @@ const Contact = () => {
                     </div>
 
                     <div className="flex flex-col space-y-1">
-                        <span>
+                        <span className="font-mono">
                             Write a Message
                         </span>
                         <textarea
@@ -186,13 +186,13 @@ const Contact = () => {
 
                     <button
                         className="disabled:bg-green-700 hover:bg-green-500 bg-green-600 active:bg-green-700 h-12"
-                        disabled={isSubmitting || isSubmitted}
+                        disabled={true} //isSubmitting || isSubmitted
                     >
                         <span 
-                            className={`${isSubmitting || isSubmitted ? 'text-gray-300' : 'text-white' } animate-spin`}
+                            className="text-gray-300"
                         >
-                            { isSubmitted ? 'Email send successfully' : 
-                                isSubmitting ? 'Sending...' : 'SEND'
+                            { isSubmitted ? 'Email sent successfully' : 
+                                isSubmitting ? 'Sending...' : 'This feature is under development.'
                             }
                         </span>
                     </button>

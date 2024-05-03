@@ -6,7 +6,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <div className="min-h-7 flex flex-row justify-between items-center bg-zinc-700 px-3">
+        <div className="min-h-7 flex flex-row justify-between items-center bg-zinc-600 px-3">
             <div className="flex flex-row items-center">
                 <a
                     href="https://github.com/lynnhtinnyein/vscode-style-portfolio"

@@ -16,7 +16,7 @@ const About = () => {
     );
 
     return (
-        <div className="animate-fadeup flex flex-col space-y-11 flex-1 p-10 overflow-auto font-mono">
+        <div className="animate-fadeup flex flex-col space-y-11 flex-1 p-5 md:p-10 overflow-auto font-mono">
             <div className="flex flex-col space-y-6">
                 <div>
                     <span className="text-2xl text-orange-300 border-b-4 border-b-zinc-500">
@@ -99,7 +99,7 @@ const About = () => {
                     </div>
                     <div className="flex flex-row items-center space-x-3">
                         <span className="max-w-10 min-w-10 text-center font-bold text-blue-200">
-                            2020 | Present
+                            2020 | Now
                         </span>
                         <span className="text-sm">
                             Working as a freelance developer and creating own products.                       
