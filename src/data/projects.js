@@ -42,15 +42,15 @@ const projects = [
         showcase_img: 'burmesefonts.png',
         screenshots: [],
     },
-    {
-        id: uuid(),
-        name: 'iCafe',
-        status: 'OnGoing',
-        short_desc: 'A complete restaurant order system and stock management app with realtime data sync which also support to connect multiple stores and branches.',
-        showcase_img: 'icafe.png',
-        screenshots: [],
+    // {
+    //     id: uuid(),
+    //     name: 'iCafe',
+    //     status: 'OnGoing',
+    //     short_desc: 'A complete restaurant order system and stock management app with realtime data sync which also support to connect multiple stores and branches.',
+    //     showcase_img: 'icafe.png',
+    //     screenshots: [],
         
-    },
+    // },
     {
         id: uuid(),
         name: 'MortgagePro',
