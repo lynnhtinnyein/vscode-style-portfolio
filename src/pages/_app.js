@@ -1,5 +1,12 @@
+import { PagesProvider } from "@/context/pages";
 import "@/styles/globals.css";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const App = ({ Component, pageProps }) => {
+    return (
+        <PagesProvider>
+            <Component {...pageProps} />
+        </PagesProvider>
+    );
+};
+
+export default App;

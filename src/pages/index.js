@@ -2,14 +2,14 @@ import Explorer from "@/components/Explorer/Explorer";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ActivityBar from "@/components/ActivityBar/ActivityBar";
-import { PagesProvider, usePages } from "@/context/pages";
+import { usePages } from "@/context/pages";
 import { useEffect, useState } from "react";
 import useDeviceDetection from "@/hooks/useDeviceDetection";
 import TabBar from "@/components/TabBar/TabBar";
 import { pages } from "@/data/pages";
 import NoOpenPage from "@/outlets/NoOpenPage";
 
-const BaseFrame = () => {
+const Home = () => {
     const { activePage } = usePages();
     const { isMobile } = useDeviceDetection();
     const [showExplorer, setShowExplorer] = useState(true);
@@ -54,13 +54,5 @@ const BaseFrame = () => {
         </div>
     );
 };
-
-const Home = () => {
-    return (
-        <PagesProvider>
-            <BaseFrame />
-        </PagesProvider>
-    )
-}
 
 export default Home;

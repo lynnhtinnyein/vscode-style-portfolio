@@ -2,7 +2,7 @@ import React from 'react'
 
 const Github = () => {
   return (
-    <div>Github</div>
+    <div>Github data page is under development</div>
   )
 }
 
