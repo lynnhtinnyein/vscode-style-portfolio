@@ -1,7 +1,7 @@
 import { contacts } from "@/data/contacts";
 import axios from "axios";
 import Image from "next/image";
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 const Contact = () => {
