@@ -1,9 +1,9 @@
-import { usePages } from "@/context/pages";
+import { usePageController } from "@/context/pages";
 import { pages } from "@/data/pages";
 import VsCodeIcon from "@public/icons/vs-code-icons/VsCodeIcon";
 
 const NoOpenPage = () => {
-    const { openPage } = usePages();
+    const { openPage } = usePageController();
 
     return (
         <div className="flex flex-1 flex-col justify-center items-center">
@@ -15,7 +15,7 @@ const NoOpenPage = () => {
             </span>
             
             <div className="flex flex-col mt-5 items-center">
-                { pages.map( page => 
+                { pages.filter( e => e.isMainPage ).map( page => 
                     <div 
                         key={page.id}
                         className="flex flex-row cursor-pointer items-center space-x-2 mt-3"

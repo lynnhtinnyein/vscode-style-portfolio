@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import ChevronDownIcon from "../../../../public/icons/vs-code-icons/ChevronDownIcon";
 import ChevronRightIcon from "@public/icons/vs-code-icons/ChevronRight";
 import { pages } from "@/data/pages";
-import { usePages } from "@/context/pages";
+import { usePageController } from "@/context/pages";
 
 const Section = ({ title, pageIds }) => {
-    const { activePage, openPage } = usePages();
+    const { activePage, openPage } = usePageController();
     const [collapse, setCollapse] = useState(false);
 
     return (

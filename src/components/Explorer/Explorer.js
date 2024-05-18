@@ -1,10 +1,10 @@
-import { usePages } from "@/context/pages";
+import { usePageController } from "@/context/pages";
 import Section from "./partials/Section";
 import { pages } from "@/data/pages";
 import { useCallback, useEffect, useState } from "react";
 
 const Explorer = () => {
-    const { openedPages } = usePages();
+    const { openedPages } = usePageController();
     const [isResizeable, setIsResizeable] = useState(false);
     const [width, setWidth] = useState(150);
 
@@ -49,7 +49,7 @@ const Explorer = () => {
                 <Section title="open editors" pageIds={openedPages} />
 
                 {/* all pages */}
-                <Section title="portfolio" pageIds={pages.map( e => e.id )} />
+                <Section title="portfolio" pageIds={pages.filter( e => e.isMainPage ).map( page => page.id )} />
             </div>
 
             {/* resizer */}

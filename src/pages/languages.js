@@ -1,18 +1,13 @@
-import { usePages } from "@/context/pages";
-import Welcome from "./index";
-import React, { useEffect } from "react";
-import { pages } from "@/data/pages";
+import JsIcon from "@public/icons/language-icons/JsIcon";
+import { Typewriter } from "react-simple-typewriter";
 
 const Languages = () => {
-    const { openPage } = usePages();
-
-    useEffect(() => {
-        openPage(pages.find( e => e.name === 'languages.json').id);
-    }, []);
 
     return (
-        <Welcome />
+        <div className="flex-1 flex flex-col m-10">
+            This is page under construction
+        </div>
     );
-};
-
+}
+ 
 export default Languages;

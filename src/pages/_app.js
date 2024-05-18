@@ -1,12 +1,16 @@
-import { PagesProvider } from "@/context/pages";
+import Root from "@/components/Root";
+import { PageControllerProvider } from "@/context/pages";
 import "@/styles/globals.css";
 
 const App = ({ Component, pageProps }) => {
     return (
-        <PagesProvider>
-            <Component {...pageProps} />
-        </PagesProvider>
+        <PageControllerProvider>
+            <Root>
+                {/* outlet */}
+                <Component {...pageProps} />
+            </Root>
+        </PageControllerProvider>
     );
 };
 
-export default App;
+export default App

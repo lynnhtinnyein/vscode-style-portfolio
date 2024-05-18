@@ -1,6 +1,6 @@
 import React from "react";
 import { pages } from "@/data/pages";
-import { usePages } from "@/context/pages";
+import { usePageController } from "@/context/pages";
 import SourceControlIcon from "@public/icons/vs-code-icons/SourceControlIcon";
 import FilesIcon from "@public/icons/vs-code-icons/FilesIcon";
 import ActionButton from "./partials/ActionButton";
@@ -12,10 +12,10 @@ const ActivityBar = ({
     isDarkMode, 
     setIsDarkMode 
 }) => {
-    const { activePage, openPage } = usePages();
+    const { activePage, openPage } = usePageController();
 
-    const topPages = pages.filter( e => e.position === 'top');
-    const bottomPages = pages.filter( e => e.position === 'bottom');
+    const topPages = pages.filter( e => e.isMainPage && e.activityBarPosition === 'top');
+    const bottomPages = pages.filter( e => e.isMainPage && e.activityBarPosition === 'bottom');
 
     return (
         <div className="flex flex-col justify-between bg-zinc-800 min-w-12">

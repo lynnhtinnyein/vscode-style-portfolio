@@ -1,3 +1,5 @@
+import { v4 as uuid } from 'uuid';
+
 //icons
 import ReactIcon from "@public/icons/language-icons/ReactIcon";
 import AccountIcon from "@public/icons/vs-code-icons/AccountIcon";
@@ -11,62 +13,75 @@ import HomeIcon from "@public/icons/vs-code-icons/HomeIcon";
 import MarkDownIcon from "@public/icons/language-icons/MarkDownIcon";
 import JsonIcon from "@public/icons/language-icons/JsonIcon";
 import JsObjectIcon from "@public/icons/vs-code-icons/JsonIcon";
-
-//pages
-import Welcome from "@/outlets/Welcome";
-import Languages from "@/outlets/Languages";
-import Projects from "@/outlets/Projects";
-import Github from "@/outlets/Github";
-import Contact from "@/outlets/Contact";
-import About from "@/outlets/About";
+import projects from "./projects";
+import HtmlIcon from '@public/icons/language-icons/HtmlIcon';
 
 export const pages = [
     {
         id: 1,
         name: 'welcome.jsx',
+        pathname: '/',
         fileIcon: <ReactIcon size="16" />,
+        isMainPage: true,
         activityBarIcon: <HomeIcon/>,
-        position: 'top',
-        component: <Welcome/>
+        activityBarPosition: 'top'
     },
     {
         id: 2,
         name: 'languages.json',
+        pathname: '/languages',
         fileIcon: <JsonIcon size="16" />,
+        isMainPage: true,
         activityBarIcon: <JsObjectIcon/>,
-        position: 'top',
-        component: <Languages/>
+        activityBarPosition: 'top'
     },
     {
         id: 3,
         name: 'projects.js',
+        pathname: '/projects',
         fileIcon: <JsIcon size="16" />,
+        isMainPage: true,
         activityBarIcon: <CodeIcon/>,
-        position: 'top',
-        component: <Projects/>
+        activityBarPosition: 'top'
     },
     {
         id: 4,
         name: 'github.git',
+        pathname: '/github',
         fileIcon: <GitIcon size="16" />,
+        isMainPage: true,
         activityBarIcon: <GithubIcon/>,
-        position: 'top',
-        component: <Github/>
+        activityBarPosition: 'top'
     },
     {
         id: 5,
         name: 'contact.css',
+        pathname: '/contact',
         fileIcon: <CssIcon size="16" />,
+        isMainPage: true,
         activityBarIcon: <MailIcon/>,
-        position: 'top',
-        component: <Contact/>
+        activityBarPosition: 'top'
     },
     {
         id: 6,
         name: 'about.md',
+        pathname: '/about',
         fileIcon: <MarkDownIcon size="16" />,
+        isMainPage: true,
         activityBarIcon: <AccountIcon/>,
-        position: 'bottom',
-        component: <About/>
-    }
+        activityBarPosition: 'bottom'
+    },
+
+    //export each project as page
+    ...projects.map( (project) => {
+        return {
+            id: uuid(),
+            name: project.name,
+            path: '/projects/' + project.id,
+            fileIcon: <HtmlIcon size="16"/>,
+            isMainPage: false,
+            activityBarIcon: <AccountIcon/>,
+            activityBarPosition: 'bottom'
+        }
+    })
 ];

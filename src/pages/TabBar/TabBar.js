@@ -1,9 +1,9 @@
-import { usePages } from "@/context/pages";
 import React from "react";
+import { usePageController } from "@/context/pages";
 import Tab from "./partials/Tab";
 
 const TabBar = () => {
-    const { activePage, openedPages, switchPage, closePage } = usePages();
+    const { activePage, openedPages, switchPage, closePage } = usePageController();
 
     return (
         <div className="min-h-8 max-h-8">
