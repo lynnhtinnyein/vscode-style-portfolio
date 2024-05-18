@@ -13,7 +13,9 @@ const Projects = () => {
     }, []);
 
     return (
-        <div className="flex flex-row flex-wrap flex-1 overflow-auto p-8">
+        <div>
+                        This page is still under development and will not include all data.
+                        <div className="flex flex-row flex-wrap flex-1 overflow-auto p-8">
             { projects.map( (project, index) => 
                 <Link 
                     href={project.link ?? ''}
@@ -57,6 +59,8 @@ const Projects = () => {
                 </Link>
             )}
         </div>
+        </div>
+        
         
     );
 }
