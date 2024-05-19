@@ -12,7 +12,7 @@ const Projects = () => {
 
     return (
         <div className="flex flex-col flex-1 overflow-auto p-5 md:p-10 space-y-5">
-            <span className="text-2xl font-mono">Here is what I've built so far</span>
+            <span className="text-2xl font-mono">Here is what I&apos;ve built so far</span>
             <div className="flex flex-row justify-center flex-wrap flex-1">
                 { projects.map( (project, index) => 
                     <Link 
@@ -50,8 +50,8 @@ const Projects = () => {
                                 {project.shortDesc}
                             </span>
                             <div className="flex flex-row flex-wrap">
-                                { project.teches.map( tech =>
-                                    <div className="m-1">
+                                { project.teches.map( (tech, index) =>
+                                    <div key={tech + index} className="m-1">
                                         <span className="text-white text-xs bg-purple-500 px-2 py-1 rounded-full">
                                             { tech }
                                         </span>
