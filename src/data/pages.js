@@ -18,7 +18,6 @@ export const pages = [
         name: 'welcome.jsx',
         pathname: '/',
         fileIcon: <ReactIcon size="16" />,
-        isMainPage: true,
         activityBarIcon: <HomeIcon/>,
         activityBarPosition: 'top'
     },
@@ -27,7 +26,6 @@ export const pages = [
         name: 'languages.json',
         pathname: '/languages',
         fileIcon: <JsonIcon size="16" />,
-        isMainPage: true,
         activityBarIcon: <JsObjectIcon/>,
         activityBarPosition: 'top'
     },
@@ -36,7 +34,6 @@ export const pages = [
         name: 'projects.js',
         pathname: '/projects',
         fileIcon: <JsIcon size="16" />,
-        isMainPage: true,
         activityBarIcon: <CodeIcon/>,
         activityBarPosition: 'top'
     },
@@ -45,7 +42,6 @@ export const pages = [
         name: 'github.git',
         pathname: '/github',
         fileIcon: <GitIcon size="16" />,
-        isMainPage: true,
         activityBarIcon: <GithubIcon/>,
         activityBarPosition: 'top'
     },
@@ -54,7 +50,6 @@ export const pages = [
         name: 'contact.css',
         pathname: '/contact',
         fileIcon: <CssIcon size="16" />,
-        isMainPage: true,
         activityBarIcon: <MailIcon/>,
         activityBarPosition: 'top'
     },
@@ -63,7 +58,6 @@ export const pages = [
         name: 'about.md',
         pathname: '/about',
         fileIcon: <MarkDownIcon size="16" />,
-        isMainPage: true,
         activityBarIcon: <AccountIcon/>,
         activityBarPosition: 'bottom'
     }

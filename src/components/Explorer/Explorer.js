@@ -49,7 +49,7 @@ const Explorer = () => {
                 <Section title="open editors" pageIds={openedPages} />
 
                 {/* all pages */}
-                <Section title="portfolio" pageIds={pages.filter( e => e.isMainPage ).map( page => page.id )} />
+                <Section title="portfolio" pageIds={pages.map( page => page.id )} />
             </div>
 
             {/* resizer */}

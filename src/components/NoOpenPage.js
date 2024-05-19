@@ -15,7 +15,7 @@ const NoOpenPage = () => {
             </span>
             
             <div className="flex flex-col mt-5 items-center">
-                { pages.filter( e => e.isMainPage ).map( page => 
+                { pages.map( page => 
                     <div 
                         key={page.id}
                         className="flex flex-row cursor-pointer items-center space-x-2 mt-3"

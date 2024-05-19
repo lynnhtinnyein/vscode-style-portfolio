@@ -14,8 +14,8 @@ const ActivityBar = ({
 }) => {
     const { activePage, openPage } = usePageController();
 
-    const topPages = pages.filter( e => e.isMainPage && e.activityBarPosition === 'top');
-    const bottomPages = pages.filter( e => e.isMainPage && e.activityBarPosition === 'bottom');
+    const topPages = pages.filter( e => e.activityBarPosition === 'top');
+    const bottomPages = pages.filter( e => e.activityBarPosition === 'bottom');
 
     return (
         <div className="flex flex-col justify-between bg-zinc-800 min-w-12">
