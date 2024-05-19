@@ -26,7 +26,7 @@ const Section = ({ title, pageIds }) => {
 
             <div className={`${collapse ? 'max-h-0' : 'max-h-48'} overflow-hidden transition-height duration-400`}>
                 {pageIds.map( id => (
-                    <span key={id}>{ pages.find((e) => e.id === id).name }</span>
+                    <span key={id}>{ id } </span>
                 ))}
             </div>
         </div>
