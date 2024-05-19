@@ -26,18 +26,7 @@ const Section = ({ title, pageIds }) => {
 
             <div className={`${collapse ? 'max-h-0' : 'max-h-48'} overflow-hidden transition-height duration-400`}>
                 {pageIds.map( id => (
-                    <div
-                        key={id}
-                        className={`flex flex-row space-x-2 py-1 px-5 cursor-pointer ${
-                            id === activePage && "bg-zinc-700"
-                        }`}
-                        onClick={() => openPage(id)}
-                    >
-                        {pages.find((e) => e.id === id).fileIcon}
-                        <span className="text-xs text-yellow-200">
-                            {pages.find((e) => e.id === id).name}
-                        </span>
-                    </div>
+                    <span key={id}>{ pages.find((e) => e.id === id).name }</span>
                 ))}
             </div>
         </div>
