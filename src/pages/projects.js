@@ -18,7 +18,7 @@ const Projects = () => {
                     <Link 
                         href={'projects/' + project.id}
                         key={project.id} 
-                        className={`flex justify-center max-w-80 min-w-64 w-full md:w-1/3 transition-fade duration-500 min-h-96 ${
+                        className={`flex justify-center max-w-72 min-w-64 w-full md:w-1/3 transition-fade duration-500 min-h-96 ${
                             mounted ? 'opacity-96 mt-0' : 'opacity-0 mt-10'
                         }`}
                         style={{

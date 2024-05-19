@@ -1,5 +1,3 @@
-import { v4 as uuid } from 'uuid';
-
 //icons
 import ReactIcon from "@public/icons/language-icons/ReactIcon";
 import AccountIcon from "@public/icons/vs-code-icons/AccountIcon";
@@ -13,8 +11,6 @@ import HomeIcon from "@public/icons/vs-code-icons/HomeIcon";
 import MarkDownIcon from "@public/icons/language-icons/MarkDownIcon";
 import JsonIcon from "@public/icons/language-icons/JsonIcon";
 import JsObjectIcon from "@public/icons/vs-code-icons/JsonIcon";
-import projects from "./projects";
-import HtmlIcon from '@public/icons/language-icons/HtmlIcon';
 
 export const pages = [
     {
@@ -70,18 +66,5 @@ export const pages = [
         isMainPage: true,
         activityBarIcon: <AccountIcon/>,
         activityBarPosition: 'bottom'
-    },
-
-    //export each project as page
-    ...projects.map( (project) => {
-        return {
-            id: uuid(),
-            name: project.name,
-            path: '/projects/' + project.id,
-            fileIcon: <HtmlIcon size="16"/>,
-            isMainPage: false,
-            activityBarIcon: <AccountIcon/>,
-            activityBarPosition: 'bottom'
-        }
-    })
+    }
 ];
