@@ -39,9 +39,7 @@ const Root = ({ children }) => {
                     <div className="flex flex-col flex-1 overflow-hidden">
                         <TabBar />
                         <div className="flex flex-1 bg-zinc-800 overflow-hidden">
-                            { children }
-                            {/* { openedPages.length === 0 ? <NoOpenPage/> : children } */}
-
+                            { openedPages.length === 0 ? <NoOpenPage/> : children }
                         </div>
                     </div>
                 </div>
