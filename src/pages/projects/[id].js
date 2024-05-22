@@ -30,10 +30,12 @@ const Project = ({ name, about, numbersOfScreenshots, status, mainFeatures, tech
                                 className="min-h-60 max-h-60 min-w-96 max-w-96 rounded-xl overflow-hidden border border-1 border-gray-600"
                             >
                                 <Image
+                                    alt="project screenshot"
                                     width={384}
                                     height={240}
                                     className="w-full h-full border-red-400"
                                     src={`/screenshots/${name}/desktop/${screenshot}`}
+                                    priority={true}
                                 />
                             </div>
                         )}
@@ -43,10 +45,12 @@ const Project = ({ name, about, numbersOfScreenshots, status, mainFeatures, tech
                                 className="min-h-60 max-h-60 min-w-28 max-w-28 rounded-xl overflow-hidden border border-1 border-gray-600"
                             >
                                 <Image
+                                    alt="project screenshot"
                                     width={120}
                                     height={240}
                                     className="w-full h-full"
                                     src={`/screenshots/${name}/mobile/${screenshot}`}
+                                    priority={true}
                                 />
                             </div>
                         )}
