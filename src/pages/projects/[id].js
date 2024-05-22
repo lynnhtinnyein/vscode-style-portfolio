@@ -1,4 +1,5 @@
 import ArrowLeftCircle from "@public/icons/vs-code-icons/ArrowLeftCircle";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -28,7 +29,9 @@ const Project = ({ name, about, numbersOfScreenshots, status, mainFeatures, tech
                                 key={screenshot} 
                                 className="min-h-60 max-h-60 min-w-96 max-w-96 rounded-xl overflow-hidden border border-1 border-gray-600"
                             >
-                                <img
+                                <Image
+                                    width={384}
+                                    height={240}
                                     className="w-full h-full border-red-400"
                                     src={`/screenshots/${name}/desktop/${screenshot}`}
                                 />
@@ -39,7 +42,9 @@ const Project = ({ name, about, numbersOfScreenshots, status, mainFeatures, tech
                                 key={screenshot} 
                                 className="min-h-60 max-h-60 min-w-28 max-w-28 rounded-xl overflow-hidden border border-1 border-gray-600"
                             >
-                                <img
+                                <Image
+                                    width={120}
+                                    height={240}
                                     className="w-full h-full"
                                     src={`/screenshots/${name}/mobile/${screenshot}`}
                                 />

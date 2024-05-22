@@ -1,11 +1,9 @@
-import Image from "next/image";
 import React from "react";
 import GitHubCalendar from 'react-github-calendar';
-import { Typewriter } from "react-simple-typewriter";
 
 const Github = () => {
     return (
-        <div className="flex-1 flex flex-col m-10 overflow-hidden space-y-5">
+        <div className="flex-1 flex flex-col p-5 md:p-10 overflow-hidden space-y-5">
             <div className="flex flex-row space-x-5 items-center">
                 <div>
                     <img 
