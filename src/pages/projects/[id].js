@@ -7,8 +7,8 @@ const Project = ({ name, about, numbersOfScreenshots, status, mainFeatures, tech
     const appUrl = process.env.NEXT_PUBLIC_APP_URL;
 
     const screenshots = {
-        desktop: Array.from({ length: numbersOfScreenshots.desktop }, (_, index) => (index + 1) + '.PNG'),
-        mobile: Array.from({ length: numbersOfScreenshots.mobile }, (_, index) => (index + 1) + '.PNG')
+        desktop: Array.from({ length: numbersOfScreenshots.desktop }, (_, index) => (index + 1) + '.png'),
+        mobile: Array.from({ length: numbersOfScreenshots.mobile }, (_, index) => (index + 1) + '.png')
     }
 
     return (

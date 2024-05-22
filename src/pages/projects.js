@@ -27,7 +27,7 @@ const Projects = () => {
                     >
                         <div className="flex flex-col m-1 w-full bg-gray-400 bg-opacity-5 hover:bg-opacity-15 rounded-xl space-y-3 m- relative items-center px-4 py-5 cursor-pointer">
                             <Image
-                                src={project.showcaseImage ? '/images/' + project.showcaseImage : '/images/demo.png'}
+                                src={'/images/' + project.showcaseImage}
                                 width={250}
                                 height={200}
                                 alt="Project Preview"
