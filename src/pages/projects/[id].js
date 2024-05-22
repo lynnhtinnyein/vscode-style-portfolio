@@ -34,7 +34,7 @@ const Project = ({ name, about, numbersOfScreenshots, status, mainFeatures, tech
                                     width={384}
                                     height={240}
                                     className="w-full h-full border-red-400"
-                                    src={`/screenshots/${name}/desktop/${screenshot}`}
+                                    src={`/images/screenshots/${name}/desktop/${screenshot}`}
                                     priority={true}
                                 />
                             </div>
@@ -49,7 +49,7 @@ const Project = ({ name, about, numbersOfScreenshots, status, mainFeatures, tech
                                     width={120}
                                     height={240}
                                     className="w-full h-full"
-                                    src={`/screenshots/${name}/mobile/${screenshot}`}
+                                    src={`/images/screenshots/${name}/mobile/${screenshot}`}
                                     priority={true}
                                 />
                             </div>

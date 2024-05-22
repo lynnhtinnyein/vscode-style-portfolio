@@ -6,13 +6,7 @@ const Github = () => {
         <div className="flex-1 flex flex-col p-5 md:p-10 overflow-hidden space-y-5">
             <div className="flex flex-row space-x-5 items-center">
                 <div>
-                    <img 
-                        src="https://avatars.githubusercontent.com/u/58586000?v=4" 
-                        alt="github account logo"
-                        className="rounded-full"
-                        width={80}
-                        height={80}
-                    />
+                    
                 </div>
                 <div className="flex flex-col font-mono space-y-1">
                     <span className="text-2xl">Working On</span>

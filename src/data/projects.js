@@ -45,7 +45,7 @@ export const projects = [
             A complete restaurant order system and stock management app with realtime data sync between multiple devices by specific store. 
             It also support to connect multiple stores and branches.`,
         showcaseImage: 'icafe.png',
-        link: "icafe2.izhhz.com",
+        link: "http://icafe2.izhhz.com",
         mainFeatures: [
             "Realtime data sync between devices", 
             "Will be available as web-based app or mobile app",
@@ -202,6 +202,7 @@ export const projects = [
         about:
             "A date picker component for React. Will be available as a NPM package soon.",
         showcaseImage: 'reactpickdate.png',
+        link: null,
         mainFeatures: [
             "Highlight specific dates",
             "Customizable size",
