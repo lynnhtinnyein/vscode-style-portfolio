@@ -47,12 +47,12 @@ const Projects = () => {
                                 </span>
                             </div>
                             <span className="text-gray-300 text-sm text-center max-h-10 max-w-full overflow-hidden">
-                                {project.shortDesc}
+                                {project.about}
                             </span>
                             <div className="flex flex-row flex-wrap">
                                 { project.teches.map( (tech, index) =>
                                     <div key={tech + index} className="m-1">
-                                        <span className="text-white text-xs bg-purple-500 px-2 py-1 rounded-full">
+                                        <span className="text-black text-xs bg-purple-300 px-2 py-1 rounded-full">
                                             { tech }
                                         </span>
                                     </div>

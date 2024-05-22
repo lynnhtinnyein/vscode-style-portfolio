@@ -33,5 +33,15 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        ({ addUtilities }) => {
+            const newUtilities = {
+                ".mask-gradient": {
+                    WebkitMask:
+                        "linear-gradient(90deg, #0000, #000 5% 90%, #0000)",
+                },
+            };
+            addUtilities(newUtilities, ["responsive", "hover"]);
+        },
+    ],
 };
