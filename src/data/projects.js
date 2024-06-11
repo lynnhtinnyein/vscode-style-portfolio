@@ -7,9 +7,9 @@ export const projects = [
             `A fully functional one-stop Gold & Jewelry Retail POS app with client-side print system, 
             in which debts management and mortgage management systems are already packed. 
             It can make jewelry retail sale smart, easy and fast. Why? Because jewelries are sold by according to up-to-date goldprice 
-            and sale-staffs have to calculate the price each time customers ask for the price of a certain item, but with this app, 
+            and sale-staffs have to recalculate the price each time customers ask for certain item's price, but with this app, 
             jewelries prices are already calculated and saved according to thier gold-quality, goldprice, gem-quality and other custom specifications. 
-            This app can be used as a PWA supported web application, or mobile version is also available as an optional.
+            This app can be used as a PWA supported web app, or mobile version is also available as an optional.
             `,
         showcaseImage: "moderncharm.png",
         link: "https://www.kaungsan.com",
@@ -27,10 +27,11 @@ export const projects = [
         teches: [
             "React",
             "ReactNative",
+            "Custom Stack Router",
             "Redux",
             "Tailwind",
             "Laravel",
-            "ReactPickDate",
+            "ReactPickDate"
         ],
         numbersOfScreenshots: {
             desktop: 3,
