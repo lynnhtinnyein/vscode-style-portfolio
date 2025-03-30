@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+@layer base {
+    :root {
+        /* Light theme variables */
+        --color-header: theme("colors.light-header");
+        --color-activitybar: theme("colors.light-activitybar");
+        --color-explorer: theme("colors.light-explorer");
+        --color-explorer-icon-active: theme("colors.light-explorer-icon-active");
+        --color-explorer-section-header: theme("colors.light-explorer-section-header");
+        --color-tab: theme("colors.light-tab");
+        --color-tab-active: theme("colors.light-tab-active");
+        --color-content: theme("colors.light-content");
+        --color-footer: theme("colors.light-footer");
+        --color-background: theme("colors.light-background");
+        --color-text: theme("colors.light-text");
+        --color-text-active: theme("colors.light-text-active");
+        --color-text-dim: theme("colors.light-text-dim");
+        --color-pagetitle: theme("colors.light-pagetitle");
+        --color-bg-highlight: theme("colors.light-bg-highlight");
+        --color-resizer: theme("colors.light-resizer");
+        --color-resizer-active: theme("colors.light-resizer-active");
+        --color-line: theme("colors.light-line");
+        --color-bubble-text: theme("colors.light-bubble-text");
+        --color-card: theme("colors.light-card");
+        --color-input: theme("colors.light-input");
+    }
+
+    .dark {
+        /* dark theme variables */
+        --color-header: theme("colors.dark-header");
+        --color-activitybar: theme("colors.dark-activitybar");
+        --color-explorer: theme("colors.dark-explorer");
+        --color-explorer-icon-active: theme("colors.dark-explorer-icon-active");
+        --color-explorer-section-header: theme("colors.dark-explorer-section-header");
+        --color-tab: theme("colors.dark-tab");
+        --color-tab-active: theme("colors.dark-tab-active");
+        --color-content: theme("colors.dark-content");
+        --color-footer: theme("colors.dark-footer");
+        --color-background: theme("colors.dark-background");
+        --color-text: theme("colors.dark-text");
+        --color-text-active: theme("colors.dark-text-active");
+        --color-text-dim: theme("colors.dark-text-dim");
+        --color-pagetitle: theme("colors.dark-pagetitle");
+        --color-bg-highlight: theme("colors.dark-bg-highlight");
+        --color-resizer: theme("colors.dark-resizer");
+        --color-resizer-active: theme("colors.dark-resizer-active");
+        --color-line: theme("colors.dark-line");
+        --color-bubble-text: theme("colors.dark-bubble-text");
+        --color-card: theme("colors.dark-card");
+        --color-input: theme("colors.dark-input");
+    }
+
+    body {
+        /* disable text selection */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+    }
+}
