@@ -7,7 +7,7 @@ export function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const project = applications.find((p) => p.id === Number(id));
     return {
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     };
 }
 
-const ProjectPage = async ({ params }: { params: { id: string } }) => {
+const ProjectPage = async ({ params }: { params: Promise<{ id: string }> }) => {
     const { id } = await params;
     const project = applications.find((p) => p.id === Number(id));
 
@@ -24,12 +24,7 @@ const ProjectPage = async ({ params }: { params: { id: string } }) => {
         return <div>Project not found</div>;
     }
 
-    return (
-        <ProjectDetails
-            projectType="application"
-            {...project}
-        />
-    );
+    return <ProjectDetails projectType="application" {...project} />;
 };
 
 export const revalidate = 0;
