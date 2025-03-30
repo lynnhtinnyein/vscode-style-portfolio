@@ -5,38 +5,34 @@ import SourceControlIcon from "@public/icons/vs-code-icons/SourceControlIcon";
 const Footer = () => {
     return (
         <footer className="min-h-7 flex flex-row justify-between items-center px-3 bg-[var(--color-footer)]">
-            <div className="flex flex-row items-center">
+            <div className="flex flex-row items-center space-x-3">
                 <a
                     href="https://github.com/lynnhtinnyein/vscode-style-portfolio"
-                    className="flex flex-row items-center"
+                    className="flex flex-row items-center space-x-1"
                     target="_blank"
                 >
-                    <span className="mr-1">
-                        <SourceControlIcon size="13" />
-                    </span>
+                    <SourceControlIcon size="13" />
                     <span className="text-xs mr-4">main</span>
                 </a>
 
-                <span className="mr-1">
-                    <XCircleIcon className="size-4" />
-                </span>
+                <span className="text-xs">v2</span>
 
-                <span className="text-xs mr-1">0</span>
+                <div className="flex flex-row items-center space-x-1.5">
+                    <div className="flex flex-row items-center space-x-1">
+                        <XCircleIcon className="size-4" />
+                        <span className="text-xs">0</span>
+                    </div>
 
-                <span className="mr-1">
-                    <ExclamationTriangleIcon className="size-4" />
-                </span>
-
-                <span className="text-xs">0</span>
+                    <div className="flex flex-row items-center space-x-1">
+                        <ExclamationTriangleIcon className="size-4" />
+                        <span className="text-xs">0</span>
+                    </div>
+                </div>
             </div>
 
             <div className="flex flex-row items-center space-x-2">
                 {socials.map((contact) => (
-                    <a
-                        key={contact.id}
-                        href={contact.link}
-                        target="_blank"
-                    >
+                    <a key={contact.id} href={contact.link} target="_blank">
                         {contact.icon}
                     </a>
                 ))}
