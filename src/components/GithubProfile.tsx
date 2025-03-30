@@ -13,13 +13,16 @@ const GithubProfile = ({ githubData }) => {
 
     const { userData, repos, privateRepos, languageStats } = githubData;
 
-    // Calculate account age in years
-    const calculateAccountAge = (createdAt) => {
+    const calculateAccountAge = (createdAt: string | number | Date) => {
         const createDate = new Date(createdAt);
+        if (isNaN(createDate.getTime())) {
+            throw new Error("Invalid date format");
+        }
         const now = new Date();
-        const diffInYears = (now - createDate) / (1000 * 60 * 60 * 24 * 365.25);
+        const diffInYears = (now.getTime() - createDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
         return Math.floor(diffInYears);
     };
+    
 
     // Get most starred repos
     const getMostStarredRepos = () => {
@@ -108,7 +111,7 @@ const GithubProfile = ({ githubData }) => {
                     <h3 className="text-lg font-semibold mb-4 text-emerald-400">Top Languages</h3>
                     <div className="space-y-3">
                         {Object.entries(languageStats)
-                            .sort((a, b) => b[1] - a[1])
+                            .sort((a, b) => Number(b[1]) - Number(a[1]))
                             .slice(0, 5)
                             .map(([language, count], index) => (
                                 <div key={language} className="flex items-center">
