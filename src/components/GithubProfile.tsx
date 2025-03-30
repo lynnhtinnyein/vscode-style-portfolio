@@ -1,8 +1,8 @@
 import { FaGithub, FaCodeBranch, FaUserFriends, FaRegCalendarAlt, FaLock } from "react-icons/fa";
 import { BiGitRepoForked } from "react-icons/bi";
+import Image from "next/image";
 
 const GithubProfile = ({ githubData }) => {
-    // If no data is provided, show a message
     if (!githubData) {
         return (
             <div className="bg-[#1a1b26] rounded-lg p-6 shadow-md text-center">
@@ -22,9 +22,7 @@ const GithubProfile = ({ githubData }) => {
         const diffInYears = (now.getTime() - createDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
         return Math.floor(diffInYears);
     };
-    
 
-    // Get most starred repos
     const getMostStarredRepos = () => {
         return repos.sort((a, b) => b.stargazers_count - a.stargazers_count).slice(0, 3);
     };
@@ -43,9 +41,11 @@ const GithubProfile = ({ githubData }) => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {/* Profile Card */}
                 <div className="bg-[#1a1b26] rounded-lg p-6 shadow-md flex flex-col items-center">
-                    <img
+                    <Image
                         src={userData.avatar_url}
                         alt="GitHub Avatar"
+                        width={96}
+                        height={96}
                         className="w-24 h-24 rounded-full border-4 border-indigo-500 mb-4"
                     />
                     <h3 className="text-xl font-semibold">{userData.name}</h3>
