@@ -8,6 +8,7 @@ export const timeline = [
             "Led development of a realtime freelancing platform (Next.js, Supabase, React Native).",
             "Built mobile applications with React Native Expo.",
             "Created robust bulk import/export system with Excel validation for e-commerce platform.",
+            "Created real-time chat features with Supabase in e-commerce platform, for customer <> seller and seller <> admin communications.",
             "Implemented advanced SEO optimization with SSR/CSR architecture",
             "Developed lightweight AI server using ollama and small language model for some AI features such as (summarizing reviews, personalized services recommendation and so on...).",
             "Added serverside support comprehensive localization (EN, TH, ZH) using next-intl.",

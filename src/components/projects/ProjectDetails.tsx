@@ -14,8 +14,8 @@ const ProjectDetails = ({
     teches,
     imageSource,
     link,
-    projectType
-} : ProjectDetailsProps ) => {
+    projectType,
+}: ProjectDetailsProps) => {
     const screenshots = {
         desktop: Array.from(
             { length: numbersOfScreenshots.desktop },
@@ -78,7 +78,7 @@ const ProjectDetails = ({
                             {status}
                         </span>
                     </div>
-                    <p className="mx-3">&emsp;{about}</p>
+                    <p className="mx-3 text-sm">&emsp;{about}</p>
                 </div>
             </div>
 
@@ -115,9 +115,9 @@ const ProjectDetails = ({
             {link ? (
                 <div className="flex flex-col">
                     <h2 className="text-2xl text-cyan-400 border-b-2 border-[var(--color-line)] pb-2 mb-4">
-                        { projectType === "package" ? "View on NPM" : "Live Links"}
+                        {projectType === "package" ? "View on NPM" : "Live Links"}
                     </h2>
-                    <a href={link} className="text-sm ml-1">
+                    <a href={link} target="_blank" className="text-sm ml-1">
                         {link}
                     </a>
                 </div>

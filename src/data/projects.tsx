@@ -3,13 +3,14 @@ export const applications: Project[] = [
         id: 1,
         name: "Modern Charm",
         status: "Released",
-        about: `A fully functional one-stop Gold & Jewelry Retail POS app with client-side print system, in which debts management and mortgage management systems are already packed as modular components. It can make jewelry retail sale smart, easy and fast. Why? Because jewelries are sold according to up-to-date goldprice and sale-staffs have to recalculate the price each time customers ask for certain item's price, but with this app, jewelries prices are already calculated and saved according to their gold-quality, goldprice, gem-quality and other custom specifications. This app can be used as a PWA supported web app, or mobile version is also available as an optional
+        about: `A fully functional one-stop Gold & Jewelry Retail POS app with client-side print system, in which debts management and mortgage management systems are already packed as modular components. It can make jewelry retail sale smart, easy and fast. Why? Because jewelries are sold according to up-to-date goldprice and sale-staffs have to recalculate the price each time customers ask for certain item's price, but with this app, jewelries prices are already calculated and saved according to their gold-quality, goldprice, gem-quality and other custom specifications. This app can be used as a PWA supported web app, or mobile version is also available as an optional.
             `,
         mainFeatures: [
             "Custom UI",
+            "Infinite scroll pagination system similar to a mobile app",
             "Fully responsive for all screen sizes",
             "PWA supported",
-            "Create seperate user accounts with different permissions",
+            "Create separate user accounts with individually scoped permissions (inspired by GitHub's scoped tokens)",
             "Client-side receipt print system",
             "Debts and mortgages management system with receipt print",
             "Powerful and rich search filters",
