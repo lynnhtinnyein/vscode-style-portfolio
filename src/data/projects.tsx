@@ -53,7 +53,7 @@ export const applications: Project[] = [
         teches: ["React", "CoreCSS", "Material UI", "Socket", "Laravel"],
         showcaseImage: "icafe.png",
         link: "http://icafe2.izhhz.com",
-        imageSource: "icafe",
+        imageSource: "i-cafe",
         numbersOfScreenshots: {
             desktop: 5,
             mobile: 4,
@@ -115,7 +115,7 @@ export const applications: Project[] = [
         teches: ["NextJS", "VantaJS", "TailwindCss"],
         showcaseImage: "nextmove.png",
         link: "https://thenextmove.net",
-        imageSource: "nextmove",
+        imageSource: "next-move",
         numbersOfScreenshots: {
             desktop: 2,
             mobile: 2,
