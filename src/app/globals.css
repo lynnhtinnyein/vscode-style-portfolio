@@ -31,6 +31,7 @@
         --color-bubble-text: theme("colors.light-bubble-text");
         --color-card: theme("colors.light-card");
         --color-input: theme("colors.light-input");
+        --color-section-title: theme("colors.light-section-title");
     }
 
     .dark {
@@ -56,6 +57,7 @@
         --color-bubble-text: theme("colors.dark-bubble-text");
         --color-card: theme("colors.dark-card");
         --color-input: theme("colors.dark-input");
+        --color-section-title: theme("colors.dark-section-title");
     }
 
     body {

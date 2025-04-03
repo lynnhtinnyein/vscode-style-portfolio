@@ -17,91 +17,91 @@ export const languageAndFrameworks = [
         name: "React",
         value: "react",
         color: "#61DAFB",
-        icon: <ReactIcon color="white" />,
+        icon: ReactIcon
     },
     {
         id: 2,
         name: "NextJS",
         value: "nextjs",
         color: "#000000",
-        icon: <NextJsIcon color="white" />,
+        icon: NextJsIcon
     },
     {
         id: 3,
         name: "React Native",
         value: "react-native",
         color: "#61DAFB",
-        icon: <ReactIcon color="white" />,
+        icon: ReactIcon
     },
     {
         id: 4,
         name: "VueJS",
         value: "vuejs",
         color: "#42B883",
-        icon: <VueJsIcon color="white" />
+        icon: VueJsIcon 
     },
     {
         id: 5,
         name: "Laravel",
         value: "laravel",
         color: "#FF2D20",
-        icon: <LaravelIcon color="white" />
+        icon: LaravelIcon 
     },
     {
         id: 6,
         name: "TypeScript",
         value: "typescript",
         color: "#3178C6",
-        icon: <TypeScriptIcon color="white" />
+        icon: TypeScriptIcon 
     },
     {
         id: 7,
         name: "NodeJS",
         value: "nodejs",
         color: "#339933",
-        icon: <NodeJsIcon color="white" />
+        icon: NodeJsIcon 
     },
     {
         id: 8,
         name: "NestJS",
         value: "nestjs",
         color: "#E0234E",
-        icon: <NestJsIcon color="white" />
+        icon: NestJsIcon 
     },
     {
         id: 9,
         name: "ExpressJS",
         value: "expressjs",
         color: "#000000",
-        icon: <ExpressJsIcon size={22} color="white" />
+        icon: ExpressJsIcon
     },
     {
         id: 10,
         name: "MongoDB",
         value: "mongodb",
         color: "#00684A",
-        icon: <MongoDbIcon color="white" />
+        icon: MongoDbIcon 
     },
     {
         id: 11,
         name: "Supabase",
         value: "supabase",
         color: "#3ECF8E",
-        icon: <SupabaseIcon color="white" size={20} />
+        icon: SupabaseIcon
     },
     {
         id: 12,
         name: "MySQL",
         value: "mysql",
         color: "#4479A1",
-        icon: <MysqlIcon color="white" />
+        icon: MysqlIcon 
     },
     {
         id: 13,
         name: "SQLite",
         value: "sqlite",
         color: "#0F80CC",
-        icon: <SqliteIcon color="white" />
+        icon: SqliteIcon 
     },
 ];
 
@@ -131,16 +131,15 @@ export const expertiseAreas = [
         id: 1,
         title: "Frontend Development",
         skills: [
-            "Responsive UI/UX Implementation",
+            "Responsive & Cross-browser Compatibility",
             "Progressive Web Apps (PWAs)",
-            "SEO Optimization",
-            "State Management (Redux, Zustand, Context API)",
             "WebSockets and Real-time Communication",
             "Internationalization and Localization",
             "Third-party API Integration",
             "Animation and Interactivity",
-            "Cross-browser Compatibility",
-            "Performance Optimization (Caching, Memorizing, Lazy Loading)"
+            "SEO Optimization",
+            "Performance Optimization (Caching, Memorizing, Lazy Loading)",
+            "State Management (Redux, Zustand, Context API)"
         ],
     },
     {
@@ -165,9 +164,9 @@ export const expertiseAreas = [
         skills: [
             "Cross-platform Compatibility",
             "App Store Deployment",
-            "Push Notifications (Firebase, Expo)",
+            "Push Notifications",
             "Offline Capability",
-            "Offline Print System",
+            "Print System",
             "Background Syncing and Tasks",
             "In-app Purchases and Subscriptions"
         ],
@@ -194,6 +193,19 @@ export const expertiseAreas = [
             "Modular Architecture",
             "NextJS Layout-Based Architecture and Different Rendering Techniques"
         ],
-    }
+    },
+    {
+        id: 6,
+        title: "Best Practices",
+        skills: [
+            "Reuseable and future-proof components for long-term use and efficiency.",
+            "Prioritize CSS over JavaScript for better performance.",
+            "Write concise, optimized code without unnecessary complexity.",
+            "Ensure full responsiveness across all devices and browsers.",
+            "Optimize performance by reducing re-renders, lazy loading, and caching.",
+            "Follow clean code principles for readability and collaboration.",
+            "Follow best practices and stay updated with industry trends.",
+        ]
+    },
 ];
 

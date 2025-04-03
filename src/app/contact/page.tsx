@@ -26,12 +26,12 @@ const Contact = () => {
             <div className="grid md:grid-cols-2 gap-6">
                 <ContactForm />
 
-                <div className="space-y-6 bg-[var(--color-card)] p-6 rounded-lg shadow-sm border border-[var(--color-line)]">
-                    <h2 className="text-2xl text-cyan-500 mb-4">Let&apos;s Connect</h2>
+                <div className="space-y-6 bg-[var(--color-card)] p-6 rounded-lg shadow border border-[var(--color-line)]">
+                    <h2 className="text-2xl text-[var(--color-section-title)] mb-4">Let&apos;s Connect</h2>
 
                     <div className="space-y-4">
                         <div className="flex items-center space-x-3">
-                            <MailIcon className="text-cyan-500" />
+                            <MailIcon className="text-[var(--color-section-title)]" />
                             <a
                                 href="mailto:lynnhtinnyein@gmail.com"
                                 className="hover:text-cyan-700 transition-colors"
@@ -42,13 +42,13 @@ const Contact = () => {
                         </div>
 
                         <div className="flex items-center space-x-3">
-                            <MapPinIcon className="size-6 text-cyan-500" />
+                            <MapPinIcon className="size-6 text-[var(--color-section-title)]" />
                             <span itemProp="location">Bangkok, Thailand</span>
                         </div>
                     </div>
 
                     <div className="mt-6">
-                        <h3 className="text-xl text-cyan-500 mb-3">Social Links</h3>
+                        <h3 className="text-xl text-[var(--color-section-title)] mb-3">Social Links</h3>
                         <div className="flex space-x-2">
                             {socials.map((social) => (
                                 <a
@@ -56,7 +56,7 @@ const Contact = () => {
                                     href={social.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="hover:text-cyan-500 transition-colors overflow-hidden rounded"
+                                    className="hover:text-[var(--color-section-title)] transition-colors overflow-hidden rounded"
                                     aria-label={social.name}
                                 >
                                     <Image

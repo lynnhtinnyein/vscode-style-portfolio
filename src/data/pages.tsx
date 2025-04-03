@@ -10,6 +10,8 @@ import GithubIcon from "@public/icons/vs-code-icons/GithubIcon";
 import MailIcon from "@public/icons/vs-code-icons/MailIcon";
 import HomeIcon from "@public/icons/vs-code-icons/HomeIcon";
 import JsObjectIcon from "@public/icons/vs-code-icons/JsonIcon";
+import PdfIcon from "@public/icons/language-icons/PdfIcon";
+import DocumentIcon from "@public/icons/vs-code-icons/DocumentIcon";
 
 export const pages: Page[] = [
     {
@@ -59,5 +61,13 @@ export const pages: Page[] = [
         fileIcon: <MarkDownIcon size="16" />,
         activityBarIcon: <AccountIcon/>,
         activityBarPosition: 'bottom'
+    },
+    {
+        id: 7,
+        name: 'resume.pdf',
+        pathname: '/resume',
+        fileIcon: <PdfIcon size="16" />,
+        activityBarIcon: <DocumentIcon/>,
+        activityBarPosition: 'top'
     }
 ];

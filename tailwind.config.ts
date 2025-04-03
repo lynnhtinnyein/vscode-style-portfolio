@@ -33,6 +33,7 @@ export default {
                 "light-bubble-text": colors.gray[900],
                 "light-card": colors.white,
                 "light-input": colors.gray[100],
+                "light-section-title": colors.cyan[400],
 
                 // dark theme
                 "dark-header": colors.zinc[900],
@@ -56,6 +57,7 @@ export default {
                 "dark-bubble-text": colors.cyan[300],
                 "dark-card": colors.zinc[700],
                 "dark-input": colors.zinc[800],
+                "dark-section-title": colors.cyan[300],
             },
             fontFamily: {
                 sans: ["var(--font-inter)", "system-ui", "sans-serif"],

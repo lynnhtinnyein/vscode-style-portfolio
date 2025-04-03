@@ -70,9 +70,9 @@ const ContactForm = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="space-y-4 bg-[var(--color-card)] p-5 rounded-lg shadow-sm border border-[var(--color-line)]"
+            className="space-y-4 bg-[var(--color-card)] p-5 rounded-lg shadow border border-[var(--color-line)]"
         >
-            <h2 className="text-2xl text-cyan-500">Get in Touch</h2>
+            <h2 className="text-2xl text-[var(--color-section-title)]">Get in Touch</h2>
 
             {/* Name Input */}
             <div className="relative">
@@ -80,7 +80,7 @@ const ContactForm = () => {
                     Name
                 </label>
                 <div className="absolute inset-y-0 left-0 px-3 flex items-center pointer-events-none">
-                    <UserIcon className="size-5 text-cyan-500" />
+                    <UserIcon className="size-5 text-[var(--color-section-title)]" />
                 </div>
                 <input
                     type="text"
@@ -100,7 +100,7 @@ const ContactForm = () => {
                     Email
                 </label>
                 <div className="absolute inset-y-0 left-0 px-3 flex items-center pointer-events-none">
-                    <EnvelopeIcon className="size-5 text-cyan-500" />
+                    <EnvelopeIcon className="size-5 text-[var(--color-section-title)]" />
                 </div>
                 <input
                     type="email"
@@ -120,7 +120,7 @@ const ContactForm = () => {
                     Message
                 </label>
                 <div className="absolute inset-y-0 left-0 px-3 pt-3 pointer-events-none">
-                    <ChatBubbleLeftIcon className="size-5 text-cyan-500" />
+                    <ChatBubbleLeftIcon className="size-5 text-[var(--color-section-title)]" />
                 </div>
                 <textarea
                     id="message"

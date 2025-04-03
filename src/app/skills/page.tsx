@@ -29,7 +29,7 @@ const SkillsPage = () => {
                                 style={{ backgroundColor: skill.color }}
                                 itemProp="knowsAbout"
                             >
-                                {skill?.icon}
+                                <skill.icon size={24} color="white" />
                                 <span>{skill.name}</span>
                             </div>
                         ))}
@@ -65,7 +65,7 @@ const SkillsPage = () => {
                                 key={index}
                                 className="p-5 bg-[var(--color-card)] rounded-lg border border-[var(--color-line)] shadow-sm"
                             >
-                                <h3 className="text-cyan-300 font-medium mb-3">{area.title}</h3>
+                                <h3 className="text-[var(--color-section-title)] font-medium mb-3">{area.title}</h3>
                                 <ul className="text-sm list-disc list-inside space-y-1">
                                     {area.skills.map((skill, index) => (
                                         <li key={index} itemProp="knowsAbout">
