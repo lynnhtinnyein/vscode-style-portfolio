@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
 import { toPng } from "html-to-image";
 import { jsPDF } from "jspdf";
@@ -10,8 +10,11 @@ const ResumePage = () => {
     const pageOneRef = useRef(null);
     const pageTwoRef = useRef(null);
 
+    const [isDownloading, setIsDownloading] = useState(false);
+
     const handleDownload = async () => {
         if (confirm("Are you sure you want to download the resume?")) {
+            setIsDownloading(true)
             try {
                 // Convert each page to an image
                 if (!pageOneRef.current || !pageTwoRef.current) {
@@ -48,6 +51,8 @@ const ResumePage = () => {
             } catch (error) {
                 console.error("Error generating PDF:", error);
                 alert("Failed to generate PDF. Please try again.");
+            } finally {
+                setIsDownloading(false);
             }
         }
     };
@@ -60,10 +65,11 @@ const ResumePage = () => {
                     <span className="text-sm font-sans text-[var(--color-text)]">A4 size</span>
                     <button
                         onClick={handleDownload}
-                        className="flex flex-row space-x-2 items-center text-sm px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors duration-300"
+                        className="flex flex-row space-x-2 disabled:opacity-80 items-center text-sm px-4 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors duration-300"
+                        disabled={isDownloading}
                     >
                         <ArrowDownTrayIcon className="size-4" />
-                        <span>Download</span>
+                        <span>{isDownloading ? "Downloading..." : "Download"}</span>
                     </button>
                 </div>
             </div>
