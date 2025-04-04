@@ -11,13 +11,13 @@ const Contact = () => {
                 <div className="flex">
                     <h1
                         id="contact-heading"
-                        className="text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]"
+                        className="text-2xl sm:text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]"
                     >
                         Contact Me
                     </h1>
                 </div>
                 <p className="text-sm leading-relaxed" itemProp="description">
-                    I&apos;m always open to discussing new projects, creative ideas, or
+                    &emsp; I&apos;m always open to discussing new projects, creative ideas, or
                     opportunities to collaborate. Fill out the form below, and I&apos;ll get back to
                     you as soon as possible.
                 </p>

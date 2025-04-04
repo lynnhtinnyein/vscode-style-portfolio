@@ -67,7 +67,7 @@ const ProjectDetails = ({
             <div className="flex flex-col md:flex-row w-full items-start space-y-4 md:space-y-0 md:space-x-8">
                 <div className="flex flex-col w-full">
                     <div className="flex justify-center space-x-3 items-center mb-4">
-                        <h1 className="text-3xl text-indigo-400 font-bold">{name}</h1>
+                        <h1 className="text-2xl sm:text-3xl text-indigo-400 font-bold">{name}</h1>
                         <span
                             className={`text-sm px-3 py-1 mt-1 rounded-full ${
                                 status === "Released"
@@ -78,7 +78,7 @@ const ProjectDetails = ({
                             {status}
                         </span>
                     </div>
-                    <p className="mx-3 text-sm">&emsp;{about}</p>
+                    <p className="mx-3 text-sm">&emsp; {about}</p>
                 </div>
             </div>
 

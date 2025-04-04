@@ -33,7 +33,7 @@ const GithubProfile = ({ githubData }) => {
     return (
         <section className="flex flex-col space-y-6 mb-10">
             <div className="flex">
-                <h2 className="text-3xl text-purple-400 border-b-4 border-[var(--color-line)]">
+                <h2 className="text-2xl sm:text-3xl text-purple-400 border-b-4 border-[var(--color-line)]">
                     GitHub Profile
                 </h2>
             </div>

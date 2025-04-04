@@ -13,7 +13,7 @@ const About = () => {
         <div className="animate-fadeup flex flex-col space-y-12 flex-1 p-5 md:p-10 overflow-auto font-mono">
             <section className="flex flex-col space-y-6">
                 <div className="flex">
-                    <h1 className="text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]">
+                    <h1 className="text-2xl sm:text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]">
                         About Me
                     </h1>
                 </div>
@@ -48,7 +48,7 @@ const About = () => {
 
             <section className="flex flex-col space-y-6">
                 <div className="flex">
-                    <h2 className="text-3xl text-emerald-400 border-b-4 border-b-[var(--color-line)]">
+                    <h2 className="text-2xl sm:text-3xl text-emerald-400 border-b-4 border-b-[var(--color-line)]">
                         Timeline
                     </h2>
                 </div>

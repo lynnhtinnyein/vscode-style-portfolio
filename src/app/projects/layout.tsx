@@ -39,12 +39,12 @@ const ProjectsLayout = async ({ children }: ProjectsLayoutProps) => {
             <div className="flex flex-col space-y-8">
                 <div className="flex flex-col">
                     <div className="flex">
-                        <h1 className="text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]">
+                        <h1 className="text-2xl sm:text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]">
                             Projects & Packages
                         </h1>
                     </div>
                     <p className="mt-4 text-sm" itemProp="description">
-                        A collection of my work including web applications, mobile apps, and
+                        &emsp; A collection of my work including web applications, mobile apps, and
                         open-source npm packages.
                     </p>
                 </div>

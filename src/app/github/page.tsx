@@ -25,7 +25,7 @@ const GitHubPage = async () => {
         <div className="animate-fadeup flex flex-col space-y-12 flex-1 p-5 md:p-10 overflow-auto font-mono">
             <section className="flex flex-col space-y-4">
                 <div className="flex">
-                    <h2 className="text-3xl text-purple-400 border-b-4 border-[var(--color-line)]">
+                    <h2 className="text-2xl sm:text-3xl text-purple-400 border-b-4 border-[var(--color-line)]">
                         GitHub Profile
                     </h2>
                 </div>

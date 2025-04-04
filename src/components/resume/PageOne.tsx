@@ -78,11 +78,11 @@ const PageOne = () => {
                             {/* personal info */}
                             <div className="flex flex-col text-sm">
                                 <div className="flex items-center">
-                                    <span className="text-yellow-500">{"{"}</span>
+                                    <span className="text-[var(--color-text)]">{"{"}</span>
                                 </div>
 
                                 <div className="flex items-center">
-                                    <span className="ml-8 text-[var(--color-section-title)]">
+                                    <span className="ml-8 text-[var(--color-text)]">
                                         born
                                     </span>
                                     <span className="text-[var(--color-text)] mx-2">:</span>
@@ -91,7 +91,7 @@ const PageOne = () => {
                                 </div>
 
                                 <div className="flex items-center">
-                                    <span className="ml-8 text-[var(--color-section-title)]">
+                                    <span className="ml-8 text-[var(--color-text)]">
                                         nationality
                                     </span>
                                     <span className="text-[var(--color-text)] mx-2">:</span>
@@ -100,7 +100,7 @@ const PageOne = () => {
                                 </div>
 
                                 <div className="flex items-center">
-                                    <span className="ml-8 text-[var(--color-section-title)]">
+                                    <span className="ml-8 text-[var(--color-text)]">
                                         race
                                     </span>
                                     <span className="text-[var(--color-text)] mx-2">:</span>
@@ -109,7 +109,7 @@ const PageOne = () => {
                                 </div>
 
                                 <div className="flex items-center">
-                                    <span className="ml-8 text-[var(--color-section-title)]">
+                                    <span className="ml-8 text-[var(--color-text)]">
                                         gender
                                     </span>
                                     <span className="text-[var(--color-text)] mx-2">:</span>
@@ -118,7 +118,7 @@ const PageOne = () => {
                                 </div>
 
                                 <div className="flex items-center">
-                                    <span className="ml-8 text-[var(--color-section-title)]">
+                                    <span className="ml-8 text-[var(--color-text)]">
                                         maritalStatus
                                     </span>
                                     <span className="text-[var(--color-text)] mx-2">:</span>
@@ -126,7 +126,7 @@ const PageOne = () => {
                                 </div>
 
                                 <div className="flex items-center">
-                                    <span className="text-yellow-500">{"}"}</span>
+                                    <span className="text-[var(--color-text)]">{"}"}</span>
                                 </div>
                             </div>
                         </div>
@@ -230,8 +230,8 @@ const PageOne = () => {
                             <div className="grid grid-cols-1 gap-4">
                                 <div className="flex flex-col px-2 py-3 space-y-1 bg-[var(--color-card)] rounded-lg border border-[var(--color-line)] shadow-sm">
                                     {bestPractices.skills.map((skill, index) => (
-                                        <div key={index} className="flex space-x-2 text-xs">
-                                            <span className="text-base">•</span>
+                                        <div key={index} className="flex space-x-1 text-xs text-[var(--color-text)]">
+                                            <span className="text-xl -mt-1.5">•</span>
                                             <span key={index} itemProp="knowsAbout">
                                                 {skill}
                                             </span>

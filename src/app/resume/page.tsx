@@ -14,7 +14,7 @@ const ResumePage = () => {
 
     const handleDownload = async () => {
         if (confirm("Are you sure you want to download the resume?")) {
-            setIsDownloading(true)
+            setIsDownloading(true);
             try {
                 // Convert each page to an image
                 if (!pageOneRef.current || !pageTwoRef.current) {
@@ -58,9 +58,9 @@ const ResumePage = () => {
     };
 
     return (
-        <div className="flex-1 flex flex-col font-mono bg-[var(--color-bg-highlight)]">
+        <div className="flex-1 flex flex-col font-mono bg-[var(--color-bg-highlight)] overflow-hidden">
             <div className="flex flex-row items-center justify-between px-5 py-3 shadow-md z-[1] bg-[var(--color-content)]">
-                <h1 className="text-3xl font-bold">Resume</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold mb-1">Resume</h1>
                 <div className="flex flex-row items-center gap-3">
                     <span className="text-sm font-sans text-[var(--color-text)]">A4 size</span>
                     <button
@@ -73,8 +73,8 @@ const ResumePage = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex-1 overflow-y-auto">
-                <div className="flex flex-col items-center my-10 space-y-5">
+            <div className="flex-1 overflow-auto">
+                <div className="flex flex-col items-center my-5 sm:my-10 space-y-5 min-w-[220mm] w-full">
                     <div ref={pageOneRef}>
                         <PageOne />
                     </div>

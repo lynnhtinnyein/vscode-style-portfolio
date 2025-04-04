@@ -16,7 +16,7 @@ const WelcomePage = () => {
                     <h1 className="text-4xl font-mono">I&apos;m Lin Htin Nyein</h1>
                 </div>
                 <div className="mt-3">
-                    <span className="text-3xl font-mono text-green-400">A Web Developer</span>
+                    <span className="text-2xl sm:text-3xl font-mono text-green-400">A Web Developer</span>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:space-x-3 mt-8">
                     <span className="text-2xl font-mono">Making Apps with</span>

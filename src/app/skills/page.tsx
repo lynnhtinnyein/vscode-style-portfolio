@@ -6,12 +6,12 @@ const SkillsPage = () => {
             <div className="flex flex-col space-y-8">
                 <div className="flex flex-col">
                     <div className="flex">
-                        <h1 className="text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]">
+                        <h1 className="text-2xl sm:text-3xl text-indigo-400 border-b-4 border-[var(--color-line)]">
                             Skills & Technologies
                         </h1>
                     </div>
                     <p className="mt-4 text-sm" itemProp="description">
-                        Over the years, I&apos;ve worked with a variety of languages, frameworks,
+                        &emsp; Over the years, I&apos;ve worked with a variety of languages, frameworks,
                         and tools. Here&apos;s a comprehensive overview of my technical skillset.
                     </p>
                 </div>
@@ -21,15 +21,15 @@ const SkillsPage = () => {
                     <h2 id="languages-frameworks" className="text-xl text-teal-400 font-semibold">
                         Languages & Frameworks
                     </h2>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                         {languageAndFrameworks.map((skill) => (
                             <div
                                 key={skill.id}
-                                className="p-4 rounded-lg flex items-center space-x-3 transition-transform hover:scale-105 text-white"
+                                className="p-4 rounded-lg text-sm sm:text-base space-x-2 sm:space-x-3 flex items-center transition-transform hover:scale-105 text-white"
                                 style={{ backgroundColor: skill.color }}
                                 itemProp="knowsAbout"
                             >
-                                <skill.icon size={24} color="white" />
+                                <skill.icon size={22} color="white" />
                                 <span>{skill.name}</span>
                             </div>
                         ))}
