@@ -71,13 +71,13 @@ const About = () => {
                                     </span>
                                 )}
                                 {exp.description && <p className="text-sm">{exp.description}</p>}
-                                {exp.tasks && (
+                                {exp.tasks ? (
                                     <ul className="text-sm list-disc list-inside space-y-1 mt-2">
-                                        {exp.tasks.map((task, i) => (
+                                        {exp.tasks.full.map((task, i) => (
                                             <li key={i}>{task}</li>
                                         ))}
                                     </ul>
-                                )}
+                                ) : ''}
                             </div>
                         </div>
                     ))}

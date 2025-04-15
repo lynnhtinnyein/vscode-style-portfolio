@@ -167,7 +167,7 @@ const PageOne = () => {
                                             )}
                                             {exp.tasks && (
                                                 <ul className="text-sm list-disc list-inside space-y-1 mt-2">
-                                                    {exp.tasks.map((task, i) => (
+                                                    {exp.tasks.full.map((task, i) => (
                                                         <li key={i}>{task}</li>
                                                     ))}
                                                 </ul>

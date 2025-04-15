@@ -33,7 +33,7 @@ export default {
                 "light-bubble-text": colors.gray[900],
                 "light-card": colors.white,
                 "light-input": colors.gray[100],
-                "light-section-title": colors.cyan[400],
+                "light-section-title": colors.cyan[500],
 
                 // dark theme
                 "dark-header": colors.zinc[900],
