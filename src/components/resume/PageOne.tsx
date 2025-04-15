@@ -210,7 +210,7 @@ const PageOne = () => {
                             <h2 className="text-xl text-[var(--color-section-title)] font-bold border-b-2 border-[var(--color-line)] pb-1">
                                 <span className="flex items-center">Tools & Libraries</span>
                             </h2>
-                            <div className="flex flex-row flex-wrap gap-2">
+                            <div className="flex flex-row flex-wrap gap-1.5">
                                 {tools.map((tool, index) => (
                                     <span
                                         key={index}
